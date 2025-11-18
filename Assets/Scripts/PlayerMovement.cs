@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
     private CharacterController characterController;
+    public DialogueManager dialogueManager;
+    public BranchManager branch;
+
 
     void Start()
     {
@@ -33,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         float curSpeedX = 0f;
         float curSpeedY = 0f;
 
-        if (canMove)
+        if (!dialogueManager.dialogueActive && !branch.branchActive)
         {
             // Check sprint key
             float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
@@ -60,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
         characterController.Move(moveDirection * Time.deltaTime);
 
-        if (canLook)
+        if (!dialogueManager.dialogueActive && !branch.branchActive)
         {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);

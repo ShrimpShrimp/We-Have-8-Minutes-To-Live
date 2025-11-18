@@ -11,6 +11,7 @@ public class Footsteps : MonoBehaviour
 
     public float fadeSpeed = 3f;              // How fast volume fades in/out
     public float targetVolume = 1f;           // Max volume when walking/sprinting
+    public bool dialogueOn = false;
 
     [Tooltip("Assign your player controller script here")]
     public PlayerMovement playerController; // Reference to your movement script to check canMove
@@ -23,7 +24,7 @@ public class Footsteps : MonoBehaviour
             return;
 
         // If player cannot move, fade out and stop any sound
-        if (!playerController.canMove)
+        if (!playerController.canMove || dialogueOn)
         {
             FadeOutAndStop();
             return;
