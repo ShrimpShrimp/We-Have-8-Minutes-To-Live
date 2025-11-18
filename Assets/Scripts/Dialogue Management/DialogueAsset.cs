@@ -10,17 +10,14 @@ public class DialogueAsset : ScriptableObject
 
     public CharacterAsset[] characters;
 
-    // For each line, which character index speaks
     public int[] speakingCharacterIndices;
 
-    // Optional: For each character, sprites to update on each line (same length as lines)
-    // e.g. 2D array: characters.Length x lines.Length
-    public Sprite[,] characterSpritesPerLine;
+    // NEW: For each line, which sprite index to use for that character's emotion
+    public int[] emotionSpriteIndices;
 
-    // What to do when finished
     public DialogueEndAction onFinish = DialogueEndAction.Close;
 
-    // Optional references for branch or script to run
     public BranchAsset branchToOpen;
     public UnityEngine.Events.UnityEvent onFinishScript;
 }
+

@@ -15,8 +15,9 @@ MonoBehaviour:
   lines:
   - Wow you like three that's AMAAAAZING!
   characters:
-  - {fileID: 11400000, guid: 96e0bd6fa900bc5479c5afc66cce497f, type: 2}
+  - {fileID: 11400000, guid: d5eeacc6a5f223b4bb2c5b3cc44b94f9, type: 2}
   speakingCharacterIndices: 00000000
+  emotionSpriteIndices: 01000000
   onFinish: 0
   branchToOpen: {fileID: 0}
   onFinishScript:

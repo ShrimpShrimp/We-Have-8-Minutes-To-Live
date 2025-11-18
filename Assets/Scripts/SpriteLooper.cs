@@ -10,6 +10,9 @@ public class SpriteLooper : MonoBehaviour
     private int currentIndex = 0;
     private float timer = 0f;
 
+    public DialogueManager dialogueManager;
+    public BranchManager branchManager;
+
 
     void Update()
     {
@@ -19,7 +22,7 @@ public class SpriteLooper : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (timer >= switchInterval)
+        if (timer >= switchInterval && !dialogueManager.dialogueActive && !branchManager.branchActive)
         {
             currentIndex = (currentIndex + 1) % sprites.Length;
             targetSprite.sprite = sprites[currentIndex];

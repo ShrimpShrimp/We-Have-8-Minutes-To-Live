@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea6dcc3ca4736054ea4f06441bc60b0e, type: 3}
-  m_Name: PlaceholderPim
+  m_Name: ChoicePim
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAsset
-  characterId: PimPlaceholder
-  characterName: PlaceholderPim
-  textColor: {r: 1, g: 0, b: 0.7233753, a: 1}
+  characterId: PimChoice
+  characterName: ChoicesPim
+  textColor: {r: 1, g: 0.06252848, b: 0, a: 1}
   typingSound: {fileID: 8300000, guid: e946f512cc028704b861aca6f45e4ac2, type: 3}
   scaredSpriteIndex: 0
   angrySpriteIndex: 1

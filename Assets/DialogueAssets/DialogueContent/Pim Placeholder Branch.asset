@@ -16,8 +16,9 @@ MonoBehaviour:
   - Hello this is a branch check
   - Please pick an option, two or three!
   characters:
-  - {fileID: 11400000, guid: 96e0bd6fa900bc5479c5afc66cce497f, type: 2}
+  - {fileID: 11400000, guid: d5eeacc6a5f223b4bb2c5b3cc44b94f9, type: 2}
   speakingCharacterIndices: 0000000000000000
+  emotionSpriteIndices: 0000000001000000
   onFinish: 1
   branchToOpen: {fileID: 11400000, guid: 6499d8705ddb3ee4d8392358ca6d16fc, type: 2}
   onFinishScript:

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
@@ -23,6 +22,9 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueActive { get; private set; }
 
+    [Header("Character Visuals")]
+    public CharacterVisualsManager visualsManager; // Assign in inspector
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -38,14 +40,12 @@ public class DialogueManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // If typing is still happening, ignore input (do nothing)
             if (typingCoroutine != null)
             {
-                // You can optionally play a "cannot skip" sound here or just ignore
+                // Optionally: play a 'cannot skip' sound or ignore
                 return;
             }
 
-            // If typing is done, move to next line
             NextLine();
         }
     }
@@ -68,11 +68,10 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        CharacterAsset speaker = currentDialogue.characters[currentDialogue.speakingCharacterIndices[currentLineIndex]];
+        int speakerIndex = currentDialogue.speakingCharacterIndices[currentLineIndex];
+        CharacterAsset speaker = currentDialogue.characters[speakerIndex];
 
-        // Set text color
         dialogueText.color = speaker.textColor;
-
 
         // Play typing sound loop
         if (speaker.typingSound != null)
@@ -84,6 +83,32 @@ public class DialogueManager : MonoBehaviour
         else
         {
             audioSource.Stop();
+        }
+
+        // Get visuals by characterId via the visualsManager
+        if (visualsManager != null)
+        {
+            CharacterVisuals visuals = visualsManager.GetVisualsById(speaker.characterId);
+            if (visuals != null)
+            {
+                int emotionIndex = speaker.talkingSpriteIndex; // fallback default
+
+                if (currentDialogue.emotionSpriteIndices != null &&
+                    currentDialogue.emotionSpriteIndices.Length > currentLineIndex)
+                {
+                    emotionIndex = currentDialogue.emotionSpriteIndices[currentLineIndex];
+                }
+
+                visuals.SetEmotionSprite(emotionIndex);
+            }
+            else
+            {
+                Debug.LogWarning($"No CharacterVisuals found for characterId '{speaker.characterId}'.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("VisualsManager reference is not assigned in DialogueManager.");
         }
 
         typingCoroutine = StartCoroutine(TypeText(currentDialogue.lines[currentLineIndex]));
@@ -98,15 +123,12 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         typingCoroutine = null;
-        // Stop typing sound when done
         audioSource.Stop();
     }
 
     private void NextLine()
     {
         currentLineIndex++;
-
-        // You can update character sprites per line here if you implement that feature
 
         if (currentLineIndex < currentDialogue.lines.Length)
         {
@@ -118,8 +140,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-  
-
     private float dialogueCooldown = 0.3f;
     private float dialogueClosedTime = -10f;
 
@@ -130,13 +150,12 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-
         Debug.Log("Dialogue ended.");
         dialogueActive = false;
         dialoguePanel.SetActive(false);
         audioSource.Stop();
 
-        dialogueClosedTime = Time.time;  // mark when dialogue closed
+        dialogueClosedTime = Time.time;
 
         switch (currentDialogue.onFinish)
         {

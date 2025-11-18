@@ -18,6 +18,7 @@ MonoBehaviour:
   characters:
   - {fileID: 11400000, guid: 96e0bd6fa900bc5479c5afc66cce497f, type: 2}
   speakingCharacterIndices: 0000000000000000
+  emotionSpriteIndices: 0000000001000000
   onFinish: 0
   branchToOpen: {fileID: 0}
   onFinishScript:
