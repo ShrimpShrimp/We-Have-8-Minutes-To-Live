@@ -51,6 +51,7 @@ public class DeathPlaneMove : MonoBehaviour
         if (other.CompareTag("DeathPlane"))
         {
             Debug.Log("Game should end here.");
+            Application.Quit();
         }
     }
 }
