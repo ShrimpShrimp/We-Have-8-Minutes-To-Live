@@ -18,8 +18,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d5eeacc6a5f223b4bb2c5b3cc44b94f9, type: 2}
   speakingCharacterIndices: 00000000
   emotionSpriteIndices: 01000000
-  onFinish: 0
+  onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:
     m_PersistentCalls:
       m_Calls: []
+  eventId: PLACEHOLDER_THREE

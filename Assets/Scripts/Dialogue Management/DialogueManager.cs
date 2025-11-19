@@ -170,6 +170,18 @@ public class DialogueManager : MonoBehaviour
             case DialogueEndAction.RunScript:
                 currentDialogue.onFinishScript?.Invoke();
                 break;
+
+            case DialogueEndAction.TriggerEvent:
+                if (!string.IsNullOrEmpty(currentDialogue.eventId))
+                {
+                    Debug.Log($"Triggering event: {currentDialogue.eventId}");
+                    EventManager.TriggerEvent(currentDialogue.eventId);
+                }
+                else
+                {
+                    Debug.LogWarning("Dialogue set to TriggerEvent but no eventId specified!");
+                }
+                break;
         }
     }
 }

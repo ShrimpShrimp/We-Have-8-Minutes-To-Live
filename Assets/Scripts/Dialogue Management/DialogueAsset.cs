@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum DialogueEndAction { Close, OpenBranch, RunScript }
+public enum DialogueEndAction { Close, OpenBranch, RunScript, TriggerEvent }
 
 [CreateAssetMenu(menuName = "Dialogue/Dialogue")]
 public class DialogueAsset : ScriptableObject
@@ -11,13 +11,13 @@ public class DialogueAsset : ScriptableObject
     public CharacterAsset[] characters;
 
     public int[] speakingCharacterIndices;
-
-    // NEW: For each line, which sprite index to use for that character's emotion
     public int[] emotionSpriteIndices;
 
     public DialogueEndAction onFinish = DialogueEndAction.Close;
 
     public BranchAsset branchToOpen;
     public UnityEngine.Events.UnityEvent onFinishScript;
+
+    public string eventId;
 }
 
