@@ -22,8 +22,12 @@ public class DialogueManager : MonoBehaviour
 
     public bool dialogueActive { get; private set; }
 
+    [Header("Player")]
+    public PlayerMovement playerMovement;
+
     [Header("Character Visuals")]
     public CharacterVisualsManager visualsManager; // Assign in inspector
+
 
     private void Awake()
     {
@@ -105,12 +109,22 @@ public class DialogueManager : MonoBehaviour
             {
                 Debug.LogWarning($"No CharacterVisuals found for characterId '{speaker.characterId}'.");
             }
+
+            if (playerMovement != null)
+            {
+                Transform cameraTarget = visualsManager.GetCameraTargetById(speaker.characterId);
+
+                if (cameraTarget != null)
+                    playerMovement.RotateCameraToTarget(cameraTarget.transform);
+                else
+                    Debug.LogWarning($"No camera target assigned for speaker '{speaker.characterId}'.");
+            }
         }
         else
         {
             Debug.LogWarning("VisualsManager reference is not assigned in DialogueManager.");
         }
-
+        
         typingCoroutine = StartCoroutine(TypeText(currentDialogue.lines[currentLineIndex]));
     }
 
@@ -157,6 +171,8 @@ public class DialogueManager : MonoBehaviour
 
         dialogueClosedTime = Time.time;
 
+        
+
         switch (currentDialogue.onFinish)
         {
             case DialogueEndAction.Close:
@@ -184,4 +200,5 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
     }
+
 }

@@ -3,10 +3,8 @@ using UnityEngine;
 
 public class CharacterVisualsManager : MonoBehaviour
 {
-    // Assign all CharacterVisuals in the scene here in inspector
     public CharacterVisuals[] allCharacterVisuals;
 
-    // Map from characterId to CharacterVisuals component
     private Dictionary<string, CharacterVisuals> characterVisualsById;
 
     private void Awake()
@@ -15,24 +13,18 @@ public class CharacterVisualsManager : MonoBehaviour
 
         foreach (var visuals in allCharacterVisuals)
         {
-            // Assume CharacterVisuals GameObject name matches characterId
-            // OR set a public string characterId on CharacterVisuals component
-            string id = visuals.characterId; // see Step 3
+            string id = visuals.characterId;
 
             if (!string.IsNullOrEmpty(id))
             {
                 if (!characterVisualsById.ContainsKey(id))
-                {
                     characterVisualsById.Add(id, visuals);
-                }
                 else
-                {
-                    Debug.LogWarning($"Duplicate characterId '{id}' found in CharacterVisualsManager.");
-                }
+                    Debug.LogWarning($"Duplicate characterId '{id}' in CharacterVisualsManager.");
             }
             else
             {
-                Debug.LogWarning($"CharacterVisuals on GameObject '{visuals.gameObject.name}' has empty characterId.");
+                Debug.LogWarning($"Character '{visuals.gameObject.name}' has empty characterId.");
             }
         }
     }
@@ -40,10 +32,18 @@ public class CharacterVisualsManager : MonoBehaviour
     public CharacterVisuals GetVisualsById(string characterId)
     {
         if (characterVisualsById.TryGetValue(characterId, out var visuals))
-        {
             return visuals;
-        }
-        Debug.LogWarning($"No CharacterVisuals found for characterId '{characterId}'.");
+
+        Debug.LogWarning($"No CharacterVisuals found for '{characterId}'.");
+        return null;
+    }
+
+    public Transform GetCameraTargetById(string characterId)
+    {
+        if (characterVisualsById.TryGetValue(characterId, out var visuals))
+            return visuals.cameraTarget;
+
+        Debug.LogWarning($"No camera target for characterId '{characterId}'.");
         return null;
     }
 }
