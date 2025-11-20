@@ -423,9 +423,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ImageStretchSpawner
   sourceImage: {fileID: 1787744312}
   parent: {fileID: 1121179419}
-  spawnInterval: 0.3
-  lifeTime: 0.8
-  overshoot: 0
+  spawnInterval: 0.5
+  stretchTime: 2
+  lifeTime: 2
+  startAlpha: 0.2
+  overshoot: 10
 --- !u!4 &547521507
 Transform:
   m_ObjectHideFlags: 0
@@ -1485,6 +1487,14 @@ PrefabInstance:
     - target: {fileID: 6583356191601208574, guid: 28f4a42a30d55417b8a6eb62aaeef368, type: 3}
       propertyPath: m_Name
       value: Hourglass
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791648311301299609, guid: 28f4a42a30d55417b8a6eb62aaeef368, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6791648311301299609, guid: 28f4a42a30d55417b8a6eb62aaeef368, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
