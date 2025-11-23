@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: FamilyLeave
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CI\u2019m sorry, but I need to go for a bit.\u201D"
+  - "\u201CI\u2019m sorry WHAT? No, you\u2019re staying right here young man.\u201D"
+  - "\u201CSylvia, please calm down. Are you sure son? We don\u2019t have a ton of
+    time\u2026\u201D"
+  - "\u201CI know and I\u2019m sorry, but I bet my friends want to see me, and not
+    to mention Steph all the way out in college probably wants to call at least.\u201D"
+  - "\u201CNo, nothing is more important than family. You are going to sit your butt
+    down right now and we are going to have dinner as a family.\u201D"
+  - "\u201CSylvia, please. Joseph, I know your friends and girlfriend are important
+    to you, but you\u2019re already here. I can\u2019t make you stay, but please
+    at least wait for dinner to be done.\u201D"
+  - "\u201CSylvia, please. Joseph, I know your friends and girlfriend are important
+    to you, but you\u2019re already here. I can\u2019t make you stay, but please
+    at least wait for dinner to be done.\u201D"
+  - "\u201C...\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  speakingCharacterIndices: 00000000020000000100000000000000020000000100000002000000
+  emotionSpriteIndices: 00000000090000000600000000000000090000000100000009000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: upsetParents

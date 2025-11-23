@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6dcc3ca4736054ea4f06441bc60b0e, type: 3}
+  m_Name: Sister
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterAsset
+  characterId: Sister
+  characterName: Alice Jeremiah
+  textColor: {r: 1, g: 0, b: 0.9227276, a: 1}
+  typingSound: {fileID: 0}
+  scaredSpriteIndex: 0
+  angrySpriteIndex: 1
+  happySpriteIndex: 2
+  sadSpriteIndex: 3
+  talkingSpriteIndex: 4

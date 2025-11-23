@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: DadAngry
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CListen Joseph, I can\u2019t keep you here but you need to realize how
+    important family is. How important this is to all of us.\u201D"
+  - "\u201CPlease, just stay until dinner is done. You can go then, but just until
+    dinner is done.\u201D"
+  - "(If you do that you won\u2019t have enough time for much of anything, you know
+    that.)"
+  - (You will die here if you stay for dinner.)
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 01000000010000000000000000000000
+  emotionSpriteIndices: 00000000050000000000000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: DadWaitEarly

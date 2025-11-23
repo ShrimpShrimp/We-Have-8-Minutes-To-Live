@@ -95,7 +95,7 @@ public class DialogueManager : MonoBehaviour
             CharacterVisuals visuals = visualsManager.GetVisualsById(speaker.characterId);
             if (visuals != null)
             {
-                int emotionIndex = speaker.talkingSpriteIndex; // fallback default
+                int emotionIndex = speaker.defaultSpriteIndex; // fallback default
 
                 if (currentDialogue.emotionSpriteIndices != null &&
                     currentDialogue.emotionSpriteIndices.Length > currentLineIndex)

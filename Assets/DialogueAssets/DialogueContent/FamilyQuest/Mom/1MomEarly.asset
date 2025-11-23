@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: 1MomEarly
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHi Joseph, sorry I\u2019m just scrambling in the kitchen right now, dinner
+    should be ready in a few minutes.\u201D"
+  - "\u201CYou need any help with anything?\u201D"
+  - "\u201CNo no it\u2019s fine, I\u2019ve got it I swear. Just wish this damn casserole
+    would cook a little faster.\u201D"
+  - "\u201CCome ON.\u201D"
+  - (She seems on edge, an enormous amount of pressure has been put on her in the
+    form of this one meal. For her, finishing this casserole is literally life or
+    death. You suppose that might technically be true right now.)
+  - "\u201CJust let me work on this for a little bit, I\u2019m sorry Joseph.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  speakingCharacterIndices: 010000000000000001000000010000000000000001000000
+  emotionSpriteIndices: 010000000000000000000000090000000000000001000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 86a228fc957a5f54ea99db89ad082885, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

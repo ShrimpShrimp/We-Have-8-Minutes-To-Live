@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: 1SisterEarly
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CChrist Joseph, do you really think that was all real?\u201D"
+  characters:
+  - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
+  speakingCharacterIndices: 00000000
+  emotionSpriteIndices: 06000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 29b8083d907dc7a40b22da98309ac4c2, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

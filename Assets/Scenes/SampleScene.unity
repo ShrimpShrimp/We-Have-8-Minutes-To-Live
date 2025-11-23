@@ -307,7 +307,6 @@ MonoBehaviour:
   typingSpeed: 0.025
   playerMovement: {fileID: 289951098}
   visualsManager: {fileID: 122206577}
-  cameraLookController: {fileID: 330585548}
 --- !u!4 &122206575
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +579,7 @@ MonoBehaviour:
   canLook: 1
   dialogueManager: {fileID: 122206574}
   branch: {fileID: 122206573}
+  rotationLerpSpeed: 5
 --- !u!143 &289951099
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2433,6 +2433,7 @@ GameObject:
   - component: {fileID: 1371054699}
   - component: {fileID: 1371054698}
   - component: {fileID: 1371054700}
+  - component: {fileID: 1371054701}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -2482,6 +2483,33 @@ MonoBehaviour:
   pillar: {fileID: 1861560808}
   switchComponent: {fileID: 2116964811}
   placeHolderDialogueTwo: {fileID: 11400000, guid: 179f9de132136834aa74a168f15729f6, type: 2}
+--- !u!114 &1371054701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371054697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb58aa8af6a15643b291afda84bfa8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FamilyQuest
+  motherTransform: {fileID: 0}
+  fatherTransform: {fileID: 0}
+  sisterTransform: {fileID: 0}
+  motherComponent: {fileID: 0}
+  fatherComponent: {fileID: 0}
+  sisterComponent: {fileID: 0}
+  oneDadEarly: {fileID: 11400000, guid: eff4f6246e53f504f938b10dc926b7d6, type: 2}
+  oneMomEarly: {fileID: 11400000, guid: ad92a651bb55cac4fbb6cd18cc7d0ac7, type: 2}
+  oneSisterEarly: {fileID: 11400000, guid: 7838c1ce0f759eb43b7a80467aab306e, type: 2}
+  momAngry: {fileID: 11400000, guid: 3b18c96fe12b2164dbfa486f630c2cef, type: 2}
+  dadAngry: {fileID: 11400000, guid: a09dc39f43e4d054eb34a637f3566787, type: 2}
+  dadRepeatEarly: {fileID: 11400000, guid: 78ef565e9c458994090d380f10e24756, type: 2}
+  dadWait: {fileID: 11400000, guid: c3868e3f604146f4ebcb7830dbc94bb9, type: 2}
+  momDot: {fileID: 11400000, guid: 8d5a315ff34530947a3b636ba19977c8, type: 2}
+  sisterCrying: {fileID: 11400000, guid: f02f503a1e1bcae4aa43fa4c6cc0285b, type: 2}
 --- !u!1 &1480487390
 GameObject:
   m_ObjectHideFlags: 0

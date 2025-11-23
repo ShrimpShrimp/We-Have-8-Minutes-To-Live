@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: 2SisterEarly
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CI can\u2019t believe this. I have a volleyball game tomorrow, an assignment
+    due Thursday, so none of that matters right now?\u201D"
+  - "\u201COh my god Ricky. I need to go see Ricky.\u201D"
+  - "\u201CNo you don\u2019t young lady. Your boyfriend of three months will be fine,
+    family comes first.\u201D"
+  - "\u201CPlease mom, I\u2019m begging you. I need to go see him.\u201D"
+  - "\u201CYour mother\u2019s right. You\u2019re staying right here Alice.\u201D"
+  - "\u201CThis is so unfair! We\u2019re all going to die, and I\u2019m never going
+    to see him again! You\u2019d let Joseph leave!\u201D"
+  - "\u201CJoseph is an adult, and I\u2019d rather he doesn\u2019t leave if I can
+    help it. You\u2019re still a kid, so you\u2019re staying right here.\u201D"
+  - "\u201CI can\u2019t believe you! I can\u2019t believe this! I\u2026 I\u2026\u201D"
+  - (She begins sobbing, heavy tears running rivets down her face.)
+  - "\u201CI HATE YOU! I HATE BOTH OF YOU!\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
+  speakingCharacterIndices: 03000000030000000200000003000000010000000300000001000000030000000000000003000000
+  emotionSpriteIndices: 07000000080000000100000006000000000000000900000009000000050000000000000009000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: SisterFurious

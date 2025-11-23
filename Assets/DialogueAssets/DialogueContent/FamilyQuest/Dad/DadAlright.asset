@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: DadAlright
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CI\u2019m glad to hear it. Your mother and sister seem to be quite upset,
+    so thank you for having a decent head on your shoulders.\u201D"
+  - "\u201CI know I don\u2019t say it often, but I\u2019m proud of you ya know? You\u2019ve
+    grown to be a good, strong man.\u201D"
+  - "\u201CNow how about you go talk to your mom and sister for a little bit? They\u2019re
+    definitely going to want to hear from you.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 000000000000000000000000
+  emotionSpriteIndices: 020000000400000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: dadRepeatEarly

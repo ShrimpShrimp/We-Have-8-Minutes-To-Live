@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: 1IntroParents
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201C...\u201D"
+  - "\u201CHarold, that\u2019s got to be a test right? Check your phone.\u201D"
+  - "\u201CIt\u2019s not.\u201D"
+  - "\u201CThey gotta have some evacuation plan right Dad? Some kind of bunker underground
+    or something?\u201D"
+  - "\u201CI don\u2019t know Alice. For now, let\u2019s just sit tight. Your mother
+    is still making dinner, if this is what it says it is it\u2019d be nice to sit
+    down for dinner as a family\u2026\u201D"
+  - "(He doesn\u2019t say it but you hear it. \u201COne last time.\u201D)"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
+  speakingCharacterIndices: 030000000200000001000000030000000100000000000000
+  emotionSpriteIndices: 080000000600000007000000060000000000000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 2IntroParents

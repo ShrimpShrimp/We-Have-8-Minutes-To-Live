@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db13c750a922bbb4eac1f12aec3fdac4, type: 3}
+  m_Name: 1SisterEarlyBranch
+  m_EditorClassIdentifier: Assembly-CSharp::BranchAsset
+  choice1Text: I don't know.
+  choice1Dialogue: {fileID: 11400000, guid: 99972b108dceaa442845615da7e1912c, type: 2}
+  choice2Text: I think it was.
+  choice2Dialogue: {fileID: 11400000, guid: 99972b108dceaa442845615da7e1912c, type: 2}
