@@ -32,7 +32,8 @@ public class PlayerInteraction : MonoBehaviour
         playerCamera = Camera.main;
 
         if (interactPrompt != null)
-            interactPrompt.enabled = false; // Hide initially
+            // interactPrompt.enabled = false; // Hide initially
+            interactPrompt.gameObject.SetActive(false); 
     }
 
     public void SetCanInteract(bool state)
@@ -40,7 +41,8 @@ public class PlayerInteraction : MonoBehaviour
         canInteract = state;
 
         if (!canInteract && interactPrompt != null)
-            interactPrompt.enabled = false; // Hide prompt if can't interact
+            // interactPrompt.enabled = false; // Hide prompt if can't interact
+            interactPrompt.gameObject.SetActive(false);
     }
 
     void Update()
@@ -49,7 +51,8 @@ public class PlayerInteraction : MonoBehaviour
         {
             currentInteractable = null;
             if (interactPrompt != null)
-                interactPrompt.enabled = false;
+                // interactPrompt.enabled = false;
+                interactPrompt.gameObject.SetActive(false);
             return;
         }
 
@@ -66,7 +69,7 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     currentInteractable = interactable;
                     if (interactPrompt != null)
-                        interactPrompt.enabled = true;
+                        interactPrompt.gameObject.SetActive(true);
                 }
 
                 if (Input.GetKeyDown(KeyCode.E))
@@ -89,6 +92,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         currentInteractable = null;
         if (interactPrompt != null)
-            interactPrompt.enabled = false;
+            // interactPrompt.enabled = false;
+            interactPrompt.gameObject.SetActive(false);
     }
 }
