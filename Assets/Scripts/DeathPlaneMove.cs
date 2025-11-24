@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DeathPlaneMove : MonoBehaviour
 {
@@ -15,17 +17,63 @@ public class DeathPlaneMove : MonoBehaviour
     public float moveSpeed = 5f;
     private bool canMove = false;
 
+
+    [Header("UI Object")]
+    public TextMeshProUGUI timerText;
+    public Animator animator;
+    public int countdownAlarmTime = 10;
+    private bool animationStarted = false;
+
     void Start()
     {
         if (objectToActivate != null)
             objectToActivate.SetActive(false);
+
+        if (timerText != null){
+            timerText.gameObject.SetActive(true);
+
+            int totalSeconds = Mathf.CeilToInt(activateAfterSeconds);
+            int minutes = totalSeconds / 60;
+            int seconds = totalSeconds % 60;
+
+            timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        }
 
         StartCoroutine(ActivateAfterDelay());
     }
 
     private IEnumerator ActivateAfterDelay()
     {
-        yield return new WaitForSeconds(activateAfterSeconds);
+        float remaining = activateAfterSeconds;
+
+        // countdown loop
+        while (remaining > 0f)
+        {
+            if (timerText != null)
+            {
+                int totalSeconds = Mathf.CeilToInt(remaining);
+                int minutes = totalSeconds / 60;
+                int seconds = totalSeconds % 60;
+
+                timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+
+                if (!animationStarted && totalSeconds <= countdownAlarmTime){
+                    animator.SetTrigger("Countdown Alarm");
+                    animationStarted = true;
+                }
+            }
+
+
+
+            remaining -= Time.deltaTime;
+            yield return null;
+        }
+
+        // hide UI when finished
+        if (timerText != null)
+        {
+            timerText.gameObject.SetActive(false);
+        }
 
         // Spawn at player's position + offset
         if (player != null && objectToActivate != null)
@@ -51,7 +99,7 @@ public class DeathPlaneMove : MonoBehaviour
         if (other.CompareTag("DeathPlane"))
         {
             Debug.Log("Game should end here.");
-            Application.Quit();
+            SceneManager.LoadScene("EndMenu");
         }
     }
 }
