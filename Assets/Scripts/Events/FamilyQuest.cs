@@ -27,6 +27,7 @@ public class FamilyQuest : MonoBehaviour
         EventManager.StartListening("DadWaitEarly", DadWaitEarly);
         EventManager.StartListening("momDot", MomDot);
         EventManager.StartListening("SisterFurious", SisterFurious);
+        fatherComponent.Interact();
     }
 
     // Update is called once per frame

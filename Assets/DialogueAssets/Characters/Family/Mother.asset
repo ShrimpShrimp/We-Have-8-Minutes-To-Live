@@ -15,9 +15,14 @@ MonoBehaviour:
   characterId: Mom
   characterName: Sylvia Jeremiah
   textColor: {r: 0.4533286, g: 0, b: 1, a: 1}
-  typingSound: {fileID: 0}
+  typingSound: {fileID: 8300000, guid: 9fc2cc87f18e9974081425f6fd5010d7, type: 3}
+  defaultSpriteIndex: 0
+  defaultAltSpriteIndex: 1
+  happySpriteIndex: 2
+  laughSpriteIndex: 3
+  bitterSweetSpriteIndex: 4
+  sadSpriteIndex: 3
+  worriedSpriteIndex: 6
+  shockedSpriteIndex: 7
   scaredSpriteIndex: 0
   angrySpriteIndex: 1
-  happySpriteIndex: 2
-  sadSpriteIndex: 3
-  talkingSpriteIndex: 4
