@@ -95,9 +95,13 @@ public class EndingBarStretchSpawner : MonoBehaviour
 
         float elapsed = 0f;
 
+        // Get the source alpha at spawn time
+        float sourceAlpha = sourceImage.GetComponent<Image>().color.a;
+        float initialAlpha = startAlpha * sourceAlpha;
+
         // Set initial color with custom alpha
         Color baseColor = img.color;
-        baseColor.a = startAlpha;
+        baseColor.a = initialAlpha;
         img.color = baseColor;
 
         // NOTE: Rect is rotated 90°.
@@ -134,7 +138,7 @@ public class EndingBarStretchSpawner : MonoBehaviour
             // Fade progress
             float fadeT = lifeTime > 0f ? Mathf.Clamp01(elapsed / lifeTime) : 1f;
             Color c = baseColor;
-            c.a = Mathf.Lerp(startAlpha, 0f, fadeT);
+            c.a = Mathf.Lerp(initialAlpha, 0f, fadeT);
             img.color = c;
 
             yield return null;
