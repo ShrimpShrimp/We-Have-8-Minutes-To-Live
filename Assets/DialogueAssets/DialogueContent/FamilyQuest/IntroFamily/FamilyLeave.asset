@@ -24,9 +24,6 @@ MonoBehaviour:
   - "\u201CSylvia, please. Joseph, I know your friends and girlfriend are important
     to you, but you\u2019re already here. I can\u2019t make you stay, but please
     at least wait for dinner to be done.\u201D"
-  - "\u201CSylvia, please. Joseph, I know your friends and girlfriend are important
-    to you, but you\u2019re already here. I can\u2019t make you stay, but please
-    at least wait for dinner to be done.\u201D"
   - "\u201C...\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
