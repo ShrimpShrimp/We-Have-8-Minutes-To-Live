@@ -30,7 +30,7 @@ public class EndMenu : MonoBehaviour
         && !Input.GetMouseButtonDown(2)){
             RestartGame();
             isGameStarted = true;
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("MainGame");
         }
     } 
 

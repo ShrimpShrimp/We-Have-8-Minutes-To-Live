@@ -169,8 +169,6 @@ public class FamilyQuest : MonoBehaviour
     private void SetDinner()
     {
         sisterComponent.currentDialogue = sisterNotJoin;
-        NPCMoveToSpot.MoveToPosition(this, sisterTransform, bedDoor, 6f);
-        NPCMoveToSpot.MoveToPosition(this, sisterTransform, bedSpot, 6f);
         NPCMoveToSpot.MoveToPosition(this, motherTransform, diningDoor, 6f);
         NPCMoveToSpot.MoveToPosition(this, motherTransform, sisTable, 4f);
         //place plate at sis place **IMPLEMENT**

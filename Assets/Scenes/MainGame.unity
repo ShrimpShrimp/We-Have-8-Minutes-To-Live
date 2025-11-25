@@ -2903,7 +2903,7 @@ Transform:
   m_GameObject: {fileID: 1193504380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.465, y: -0.898, z: -11.14}
+  m_LocalPosition: {x: -5.034, y: -0.898, z: -6.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3098,7 +3098,7 @@ MonoBehaviour:
   sisterSprite: {fileID: 598238643}
   sisterCryingSprite: {fileID: 21300000, guid: 9af47528e429f3142aa8557e4b1ac4a6, type: 3}
   kitchenDoor: {x: -0.909, y: -0.898, z: -6.707}
-  kitchenSpot: {x: -8.91, y: -0.898, z: -6.707}
+  kitchenSpot: {x: -5.034, y: -0.898, z: -6.707}
   bedDoor: {x: 4.012, y: -0.898, z: -8.307}
   bedSpot: {x: 1.659, y: -0.898, z: -11.291}
   diningDoor: {x: -4.23, y: -0.898, z: -9.49}
