@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using NUnit.Framework;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Character Visuals")]
     public CharacterVisualsManager visualsManager; // Assign in inspector
+
+    [Header("Phone Shit")]
+    public GameObject phonePanel;
 
 
     private void Awake()
@@ -60,7 +64,10 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogue;
         currentLineIndex = 0;
         dialogueActive = true;
+        playerMovement.canMove = false;
+        playerMovement.canLook = false;
         dialoguePanel.SetActive(true);
+        phonePanel.SetActive(false);
         ShowLine();
     }
 
@@ -171,7 +178,8 @@ public class DialogueManager : MonoBehaviour
 
         dialogueClosedTime = Time.time;
 
-        
+        playerMovement.canMove = true;
+        playerMovement.canLook = true;
 
         switch (currentDialogue.onFinish)
         {

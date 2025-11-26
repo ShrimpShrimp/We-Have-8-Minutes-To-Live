@@ -11,6 +11,12 @@ public class BranchManager : MonoBehaviour
 
     private BranchAsset currentBranch;
 
+    [Header("Phone Shit")]
+    public GameObject phonePanel;
+
+    [Header("Player Movement")]
+    public PlayerMovement playerMovement;
+
     public bool branchActive { get; private set; }
 
     private void Awake()
@@ -26,7 +32,11 @@ public class BranchManager : MonoBehaviour
     {
         currentBranch = branch;
         branchPanel.SetActive(true);
+        phonePanel.SetActive(false);
         branchActive = true;
+
+        playerMovement.canMove = false;
+        playerMovement.canLook = false;
 
         choice1Button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = branch.choice1Text;
         choice2Button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = branch.choice2Text;
@@ -41,6 +51,9 @@ public class BranchManager : MonoBehaviour
         branchActive = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        playerMovement.canMove = false;
+        playerMovement.canLook = false;
 
         DialogueAsset nextDialogue = choice == 1 ? currentBranch.choice1Dialogue : currentBranch.choice2Dialogue;
 
