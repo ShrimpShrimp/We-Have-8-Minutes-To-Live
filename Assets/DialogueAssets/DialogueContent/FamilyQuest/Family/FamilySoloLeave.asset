@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: FamilySoloLeave
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CYeah I\u2019m sorry, I really don\u2019t feel like just arguing over a
+    passive aggressive meal with my family for the rest of my life. I\u2019m gonna
+    go.\u201D"
+  - "\u201CJoseph! You are going to stay right here right now!\u201D"
+  - "\u201CListen to your mother Joseph, sit down.\u201D"
+  - "\u201CNo, I\u2019m not. See you on the other side, I love you, but I don\u2019t
+    have much time.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  speakingCharacterIndices: 00000000020000000100000000000000
+  emotionSpriteIndices: 00000000090000000900000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: EndDinnerEarly

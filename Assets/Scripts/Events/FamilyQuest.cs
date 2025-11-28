@@ -40,6 +40,9 @@ public class FamilyQuest : MonoBehaviour
     public DialogueAsset missedDinnerDad;
     public DialogueAsset missedDinnerSister;
     public DialogueAsset missedDinnerMom;
+    public DialogueAsset sisDot;
+    public DialogueAsset sisNotCome;
+    public DialogueAsset endFamilyBad;
 
     [Header("Sprites and Renderers")]
     public SpriteRenderer sisterSprite;
@@ -93,6 +96,8 @@ public class FamilyQuest : MonoBehaviour
         EventManager.StartListening("gamePauseTillEndFamily", GamePauseTillEndFamily);
         EventManager.StartListening("SisterRushToMom", SisterRushToMom);
         EventManager.StartListening("PauseToEnd", PauseToEnd);
+        EventManager.StartListening("SisterNotCome", SisterNotCome);
+        EventManager.StartListening("GamePauseTillEndParents", GamePauseTillEndParents);
         RunTimerMethod(tooLateTime, TooLateDinner);
     }
 
@@ -295,6 +300,37 @@ public class FamilyQuest : MonoBehaviour
         footsteps.shutUp = true;
         interaction.canInteract = false;
         phone.canUsePhone = false;
+    }
+
+    private void SisterNotCome()
+    {
+        sisterComponent.currentDialogue = sisDot;
+        fatherComponent.currentDialogue = sisNotCome;
+        motherComponent.currentDialogue = sisNotCome;
+    }
+
+    private void GamePauseTillEndParents()
+    {
+        StartCoroutine(GamePauseTillParentsRoutine());
+    }
+
+    private IEnumerator GamePauseTillParentsRoutine()
+    {
+        fatherComponent.currentDialogue = endFamilyBad;
+        playerMovement.walkSpeed = 0;
+        playerMovement.sprintSpeed = 0;
+        phone.canUsePhone = false;
+        interaction.canInteract = false;
+        footsteps.shutUp = true;
+        // Wait until the death timer hits exactly 30
+        yield return new WaitUntil(() => deathTimer.remainingTime <= 30f);
+        Debug.Log("Pause for family over");
+        phone.canUsePhone = true;
+        playerMovement.walkSpeed = 3;
+        playerMovement.sprintSpeed = 7;
+        interaction.canInteract = true;
+        footsteps.shutUp = false;
+        fatherComponent.Interact();
     }
 
     private void TooLateDinner()

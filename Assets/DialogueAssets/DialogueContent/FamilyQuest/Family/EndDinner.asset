@@ -31,16 +31,27 @@ MonoBehaviour:
   - "\u201CYou stay right here young lady! Right now!\u201D"
   - "\u201CWhat are you gonna ground me? Spank me? I\u2019m leaving, deal with it.\u201D"
   - "\u201CHarold?? Stop her!\u201D"
-  - "\u201C...\u201D"
+  - "\u201CYoung lady you are staying right here, right now.\u201D"
+  - "\u201CNo, fuck that no. You don\u2019t get to have this complete and total command
+    over my life.\u201D"
+  - "\u201CYes, I do. I am your father and you need to realize that this relationship
+    we have? It\u2019s not equal. You are staying right here and that is final.\u201D"
+  - "\u201CA child is supposed to be respectful to their parents, so please. Sit
+    down right now. We are going to have dinner as a family and that\u2019s that.\u201D"
+  - "\u201CNo.\u201D"
+  - "\u201CNo?\u201D"
+  - "\u201CNo means no. I\u2019m done with this. You\u2019ve been like this my entire
+    life and no means no. I\u2019m my own person, not a thing for you to hold onto.
+    I\u2019m leaving.\u201D"
   - "(He\u2019s frozen in shock. Tears dot the corners of his eyes.)"
-  - (Great job dumbass. You just made your dad cry.)
+  - " \u201CYeah she\u2019s right. Sorry dad, I\u2019m leaving.\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
   - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
   - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
   - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
-  speakingCharacterIndices: 00000000000000000200000002000000030000000000000001000000020000000100000002000000010000000000000003000000020000000300000002000000010000000000000000000000
-  emotionSpriteIndices: 00000000000000000500000004000000060000000000000006000000090000000400000000000000000000000000000001000000090000000900000007000000070000000000000000000000
+  speakingCharacterIndices: 00000000000000000200000002000000030000000000000001000000020000000100000002000000010000000000000003000000020000000300000002000000010000000300000001000000010000000300000001000000030000000000000000000000
+  emotionSpriteIndices: 00000000000000000500000004000000060000000000000006000000090000000400000000000000000000000000000001000000090000000900000007000000090000000900000009000000090000000900000009000000090000000000000000000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

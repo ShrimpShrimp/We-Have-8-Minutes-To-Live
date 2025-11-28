@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: SisNotCome
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CShe\u2019s not coming.\u201D"
+  - "\u201CWhat the hell do you mean she\u2019s not coming?\u201D"
+  - "\u201CShe said she doesn\u2019t want to have dinner, and that\u2019s her decision.\u201D"
+  - "\u201CWell make her come, we are a family and this is what we\u2019ve decided
+    to do-\u201D"
+  - "\u201CSylvia, just leave it.\u201D"
+  - "\u201CShe\u2019ll come to her senses and be here eventually. For now let\u2019s
+    just try to enjoy dinner.\u201D"
+  - " \u201CSo Joseph, have fun out there? Interesting choice to leave the house
+    while family is here but it\u2019s your call I guess.\u201D"
+  - "\u201CReally? Being passive aggressive in our last moments together?\u201D"
+  - " \u201CI\u2019m not being much of anything. I\u2019m just saying it\u2019s disrespectful
+    to neglect your family\u2019s requests at an important time like this. You need
+    to respect our priorities.\u201D"
+  - "(Jesus Christ why did you even bother coming back in here\u2026)"
+  - " \u201CI\u2019m trying to give you my time alright? Get off my back.\u201D"
+  - "\u201CJoseph! Do not badmouth your father! We have sacrificed so much, give
+    us a little respect.\u201D"
+  - "\u201CWhat? Paying for my college? Dear lord, please forgive me for not intentionally
+    drowning myself in student loans, but I guess because I somehow don\u2019t have
+    tens of thousands of dollars a year I\u2019m just supposed to do whatever you
+    say all the time?\u201D"
+  - "\u201CJoseph stop this right now. Please, let\u2019s just try to enjoy this
+    meal your mother put together.\u201D"
+  - "(You take a look at the casserole. It\u2019s definitely undercooked)"
+  - "\u201CNow that I\u2019m thinking about it kind of a waste of what did you call
+    it? \u2018Sacrifice\u2019? I didn\u2019t even graduate and now I never will.
+    Waste of money I guess.\u201D"
+  - "\u201CAn education is important, Joseph. Even if you didn\u2019t graduate, you
+    learned a lot and grew as a person.\u201D"
+  - "\u201CMhm.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  speakingCharacterIndices: 000000000200000000000000020000000100000001000000010000000000000001000000000000000000000002000000000000000100000000000000000000000100000000000000
+  emotionSpriteIndices: 000000000900000000000000090000000500000000000000020000000000000009000000000000000000000009000000000000000900000000000000000000000100000000000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: eba6028f9dff62243a8da9e5a090a5e2, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

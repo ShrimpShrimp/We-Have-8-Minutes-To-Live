@@ -4327,6 +4327,12 @@ MonoBehaviour:
   sisterRickyMoment: {fileID: 11400000, guid: b3583f65c180d9a4e86cc8b30c9b5ac2, type: 2}
   endFamilyGood: {fileID: 11400000, guid: 503c8d3a353ca6e459d66911cab7045f, type: 2}
   endFamilyGood2: {fileID: 11400000, guid: 87f063fa4d0697e41839894b5e93e5e0, type: 2}
+  missedDinnerDad: {fileID: 11400000, guid: 454ab9f3415f03a4ab0e02e7e1eefc2c, type: 2}
+  missedDinnerSister: {fileID: 11400000, guid: fec04b29f80b7bf4aa3f6c4d131c43bb, type: 2}
+  missedDinnerMom: {fileID: 11400000, guid: e6b6bb01287afbd46afa44c1486931e3, type: 2}
+  sisDot: {fileID: 11400000, guid: 6c0abd2b41db2cd4b80e5e3bbf41e820, type: 2}
+  sisNotCome: {fileID: 11400000, guid: b8ac34ced61bc8745b193eb0938834eb, type: 2}
+  endFamilyBad: {fileID: 11400000, guid: 6f9aa4cc67b8e924bb90bb6f12a3f9b6, type: 2}
   sisterSprite: {fileID: 598238643}
   sisterCryingSprite: {fileID: 21300000, guid: 9af47528e429f3142aa8557e4b1ac4a6, type: 3}
   kitchenDoor: {x: -0.909, y: -0.898, z: -6.707}
@@ -4341,6 +4347,7 @@ MonoBehaviour:
   nextToRicky: {x: -0.06, y: -0.898, z: 6.86}
   nextToMom: {x: -6.462, y: -0.898, z: -10.977}
   setTableTime: 180
+  tooLateTime: 420
   canCallDinner: 1
   insideHouse: 1
   playerMovement: {fileID: 1487202698}

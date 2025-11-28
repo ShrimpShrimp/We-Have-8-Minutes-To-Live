@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: MissedDinnerDad
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHeh, oh hey son. Sorry, you missed us setting the table. Your sister\u2019s
+    in her room.\u201D "
+  - "\u201CDoesn\u2019t seem to want to come out though. She\u2019s pretty upset
+    we didn\u2019t let her leave.\u201D"
+  - "\u201CCould you please go talk to her? I really would like her to spend some
+    time with us.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 000000000000000000000000
+  emotionSpriteIndices: 040000000500000004000000
+  onFinish: 0
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 
