@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: 0DadEarly
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHow you doing chump? Holding up ok?\u201D"
+  - "\u201CI mean not really. Kind of hard to.\u201D"
+  - "\u201CYeah that\u2019s true I guess.\u201D"
+  - "\u201C................\u201D"
+  - "\u201CSorry, struggling to come up with much to talk about right now.\u201D"
+  - "\u201CI guess that makes sense.\u201D"
+  - "\u201CYou ever get around to fixing that rattling in your engine?\u201D"
+  - "\u201CNo, remember we were gonna get to it next weekend together.\u201D"
+  - "\u201COh yeah, sorry. Guess I forgot.\u201D"
+  - "\u201CMhm.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 01000000000000000100000000000000000000000100000001000000000000000100000000000000
+  emotionSpriteIndices: 01000000000000000200000000000000000000000000000004000000000000000100000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 1DadEarly

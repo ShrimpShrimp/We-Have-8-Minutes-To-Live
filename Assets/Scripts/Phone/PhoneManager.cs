@@ -31,7 +31,7 @@ public class PhoneManager : MonoBehaviour
     public PlayerMovement playerMovement;
 
     [Header("Phone Bool")]
-    public bool canUsePhone;
+    public bool canUsePhone = true;
 
     void Start()
     {

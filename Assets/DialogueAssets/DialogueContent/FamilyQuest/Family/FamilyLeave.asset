@@ -25,12 +25,17 @@ MonoBehaviour:
     to you, but you\u2019re already here. I can\u2019t make you stay, but please
     at least wait for dinner to be done.\u201D"
   - "\u201C...\u201D"
+  - "\u201CI swear I\u2019ll try to be back in time for dinner, I\u2019ll really
+    try.\u201D"
+  - "\u201CWe need to cherish every moment, please.\u201D"
+  - "\u201CJust try to give us at least five minutes, ok? Be back in time for us
+    to get at least five minutes.\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
   - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
   - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
-  speakingCharacterIndices: 00000000020000000100000000000000020000000100000002000000
-  emotionSpriteIndices: 00000000090000000600000000000000090000000100000009000000
+  speakingCharacterIndices: 00000000020000000100000000000000020000000100000002000000000000000200000001000000
+  emotionSpriteIndices: 00000000090000000600000000000000090000000100000009000000000000000600000004000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

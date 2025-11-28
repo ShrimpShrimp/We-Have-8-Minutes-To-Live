@@ -21,13 +21,21 @@ MonoBehaviour:
     too, but Mom and Dad need you. They\u2019d never ever say it, but they do.\u201D"
   - "\u201CIt\u2019s up to you whether to come or not, but I think it\u2019d be better
     to just forget about that and try to make the most of this, ok?\u201D"
+  - "\u201CHow am I supposed to just be ok with them just pushing me around like
+    I\u2019m a kid?\u201D"
+  - "\u201CWhat, they\u2019re supposed to hold authority over me for literally the
+    rest of my life? Like I get it if I had any time left, but it\u2019s just unfair
+    to hold this over me with this little time left.\u201D"
+  - "\u201CI get it, I get it. But they don\u2019t have any authority over me right
+    now and I\u2019m still deciding to spend time with them. They\u2019re people
+    too, and they really care about you.\u201D"
   - "\u201C...\u201D"
   - "\u201CFine.\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
   - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
-  speakingCharacterIndices: 000000000100000000000000000000000100000001000000
-  emotionSpriteIndices: 000000000500000000000000000000000900000000000000
+  speakingCharacterIndices: 000000000100000000000000000000000100000001000000000000000100000001000000
+  emotionSpriteIndices: 000000000500000000000000000000000900000005000000000000000900000000000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

@@ -4307,6 +4307,7 @@ MonoBehaviour:
   motherComponent: {fileID: 259602810}
   fatherComponent: {fileID: 1537493307}
   sisterComponent: {fileID: 598238640}
+  zeroDadEarly: {fileID: 11400000, guid: a527cac67a35afa40a1d642c11deae98, type: 2}
   oneDadEarly: {fileID: 11400000, guid: eff4f6246e53f504f938b10dc926b7d6, type: 2}
   oneMomEarly: {fileID: 11400000, guid: ad92a651bb55cac4fbb6cd18cc7d0ac7, type: 2}
   oneSisterEarly: {fileID: 11400000, guid: 7838c1ce0f759eb43b7a80467aab306e, type: 2}
@@ -4770,6 +4771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeathPlaneMove
   activateAfterSeconds: 480
   objectToActivate: {fileID: 1830544578}
+  remainingTime: 0
   player: {fileID: 1487202699}
   offsetFromPlayer: {x: 0, y: 50, z: 300}
   moveSpeed: 50
@@ -5999,7 +6001,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 1694075697}
   branchManager: {fileID: 1694075696}
   playerMovement: {fileID: 1487202698}
-  canUsePhone: 0
+  canUsePhone: 1
 --- !u!1 &1738877349
 GameObject:
   m_ObjectHideFlags: 0

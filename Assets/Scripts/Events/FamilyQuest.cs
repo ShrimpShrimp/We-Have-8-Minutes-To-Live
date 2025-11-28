@@ -17,6 +17,7 @@ public class FamilyQuest : MonoBehaviour
     public DialogueComponent sisterComponent;
 
     [Header("Dialogue Assets")]
+    public DialogueAsset zeroDadEarly;
     public DialogueAsset oneDadEarly;
     public DialogueAsset oneMomEarly;
     public DialogueAsset oneSisterEarly;
@@ -36,6 +37,9 @@ public class FamilyQuest : MonoBehaviour
     public DialogueAsset sisterRickyMoment;
     public DialogueAsset endFamilyGood;
     public DialogueAsset endFamilyGood2;
+    public DialogueAsset missedDinnerDad;
+    public DialogueAsset missedDinnerSister;
+    public DialogueAsset missedDinnerMom;
 
     [Header("Sprites and Renderers")]
     public SpriteRenderer sisterSprite;
@@ -56,6 +60,7 @@ public class FamilyQuest : MonoBehaviour
 
     [Header("Timings and location check")]
     public float setTableTime = 360f;
+    public float tooLateTime = 420f;
     public bool canCallDinner = true;
     public bool insideHouse = true;
     private bool missedDinner = false;
@@ -72,6 +77,7 @@ public class FamilyQuest : MonoBehaviour
     void Start()
     {
         EventManager.StartListening("2IntroParents", TwoIntroParents);
+        EventManager.StartListening("1DadEarly", OneDadEarly);
         EventManager.StartListening("upsetParents", UpsetParents);
         EventManager.StartListening("dadRepeatEarly", DadRepeatEarly);
         EventManager.StartListening("DadWaitEarly", DadWaitEarly);
@@ -87,27 +93,22 @@ public class FamilyQuest : MonoBehaviour
         EventManager.StartListening("gamePauseTillEndFamily", GamePauseTillEndFamily);
         EventManager.StartListening("SisterRushToMom", SisterRushToMom);
         EventManager.StartListening("PauseToEnd", PauseToEnd);
-    }
-
-    // Update is called once per frame
-    void OnDestroy()
-    {
-        EventManager.StopListening("2IntroParents", TwoIntroParents);
-        EventManager.StopListening("upsetParents", UpsetParents);
-        EventManager.StopListening("dadRepeatEarly", DadRepeatEarly);
-        EventManager.StopListening("DadWaitEarly", DadWaitEarly);
-        EventManager.StopListening("momDot", MomDot);
-        EventManager.StopListening("SisterFurious", SisterFurious);
+        RunTimerMethod(tooLateTime, TooLateDinner);
     }
 
     private void TwoIntroParents()
     {
         motherComponent.currentDialogue = oneMomEarly;
-        fatherComponent.currentDialogue = oneDadEarly;
+        fatherComponent.currentDialogue = zeroDadEarly;
         sisterComponent.currentDialogue = oneSisterEarly;
         NPCMoveToSpot.MoveToPosition(this, motherTransform, kitchenDoor, 4f);
         NPCMoveToSpot.MoveToPosition(this, motherTransform, kitchenSpot, 4f);
         //move mom to kitchen
+    }
+
+    private void OneDadEarly()
+    {
+        fatherComponent.currentDialogue = oneDadEarly;
     }
 
     private void UpsetParents() 
@@ -157,8 +158,24 @@ public class FamilyQuest : MonoBehaviour
         } else
         {
             missedDinner = true;
-            Debug.Log("You missed dinner. This isn't implemented yet.");
-            //set up changes for if you missed dinner **IMPORTANT**
+            Debug.Log("You missed dinner.");
+            NPCMoveToSpot.MoveToPosition(this, sisterTransform, bedDoor, 6f);
+            NPCMoveToSpot.MoveToPosition(this, sisterTransform, bedSpot, 6f);
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, diningDoor, 6f);
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, sisTable, 4f);
+            //place plate at sis place **IMPLEMENT**
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, momTable, 4f);
+            //place plate at mom place
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, dadTable, 4f);
+            //place plate at dad place
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, momTable, 4f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, kitchenDoor, 4f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, diningDoor, 4f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, momTable, 4f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, dadTable, 4f);
+            fatherComponent.currentDialogue = missedDinnerDad;
+            motherComponent.currentDialogue = missedDinnerMom;
+            sisterComponent.currentDialogue = missedDinnerSister;
         }
     }
 
@@ -278,6 +295,11 @@ public class FamilyQuest : MonoBehaviour
         footsteps.shutUp = true;
         interaction.canInteract = false;
         phone.canUsePhone = false;
+    }
+
+    private void TooLateDinner()
+    {
+        Debug.Log("You completely missed everything. Implement.");
     }
 
     public void RunTimerMethod(float delay, Action method)
