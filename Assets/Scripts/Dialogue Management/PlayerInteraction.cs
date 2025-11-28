@@ -17,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
     public DialogueManager dialogue;
     public BranchManager branch;
 
-    private bool canInteract = true;
+    public bool canInteract = true;
 
     private Camera playerCamera;
 

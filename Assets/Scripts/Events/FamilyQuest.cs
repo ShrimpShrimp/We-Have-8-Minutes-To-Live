@@ -32,6 +32,10 @@ public class FamilyQuest : MonoBehaviour
     public DialogueAsset oneParentsDinner;
     public DialogueAsset parentsGettingSister;
     public DialogueAsset familyDinner;
+    public DialogueAsset familyPleaseStay;
+    public DialogueAsset sisterRickyMoment;
+    public DialogueAsset endFamilyGood;
+    public DialogueAsset endFamilyGood2;
 
     [Header("Sprites and Renderers")]
     public SpriteRenderer sisterSprite;
@@ -46,6 +50,9 @@ public class FamilyQuest : MonoBehaviour
     public Vector3 sisTable = new Vector3(-6.034f, -0.898f, -10.977f);
     public Vector3 momTable = new Vector3(-7.04f, -0.898f, -10.977f);
     public Vector3 dadTable = new Vector3(-8.342f, -0.898f, -12.397f);
+    public Vector3 frontDoor = new Vector3(3.443f, -0.898f, -3.102f); //get this location
+    public Vector3 nextToRicky = new Vector3(-0.06f, -0.898f, 6.86f); //also get this location
+    public Vector3 nextToMom = new Vector3(-6.462f, -0.898f, -10.977f); //get this location
 
     [Header("Timings and location check")]
     public float setTableTime = 360f;
@@ -53,6 +60,14 @@ public class FamilyQuest : MonoBehaviour
     public bool insideHouse = true;
     private bool missedDinner = false;
     private bool sisterUpset = false;
+
+    [Header("Script References")]
+    public PlayerMovement playerMovement;
+    public DeathPlaneMove deathTimer;
+    public PhoneManager phone;
+    public PlayerInteraction interaction;
+    public Footsteps footsteps;
+
 
     void Start()
     {
@@ -68,6 +83,10 @@ public class FamilyQuest : MonoBehaviour
         EventManager.StartListening("SisterFailsafe", SisterFailsafe);
         EventManager.StartListening("SisterToDinner", SisterToDinner);
         EventManager.StartListening("ParentsGettingSister", ParentsGettingSister);
+        EventManager.StartListening("EndDinnerEarly", EndDinnerEarly);
+        EventManager.StartListening("gamePauseTillEndFamily", GamePauseTillEndFamily);
+        EventManager.StartListening("SisterRushToMom", SisterRushToMom);
+        EventManager.StartListening("PauseToEnd", PauseToEnd);
     }
 
     // Update is called once per frame
@@ -200,7 +219,65 @@ public class FamilyQuest : MonoBehaviour
         sisterComponent.currentDialogue = familyDinner;
         motherComponent.currentDialogue = familyDinner;
         fatherComponent.currentDialogue = familyDinner;
-        //SET UP FAMILY DINNER LATER
+    }
+
+    private void EndDinnerEarly()
+    {
+        fatherComponent.currentDialogue = familyPleaseStay;
+        motherComponent.currentDialogue = familyPleaseStay;
+        NPCMoveToSpot.MoveToPosition(this, sisterTransform, frontDoor, 6f);
+        NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToRicky, 6f);
+        sisterComponent.currentDialogue = sisterRickyMoment;
+    }
+
+    private void GamePauseTillEndFamily()
+    {
+        StartCoroutine(GamePauseTillEndFamilyRoutine());
+    }
+
+    private IEnumerator GamePauseTillEndFamilyRoutine()
+    {
+        fatherComponent.currentDialogue = endFamilyGood;
+        playerMovement.walkSpeed = 0;
+        playerMovement.sprintSpeed = 0;
+        phone.canUsePhone = false;
+        interaction.canInteract = false;
+        footsteps.shutUp = true;
+        // Wait until the death timer hits exactly 30
+        yield return new WaitUntil(() => deathTimer.remainingTime <= 30f);
+        Debug.Log("Pause for family over");
+        phone.canUsePhone = true;
+        playerMovement.walkSpeed = 3;
+        playerMovement.sprintSpeed = 7;
+        interaction.canInteract = true;
+        footsteps.shutUp = false;
+        fatherComponent.Interact();
+    }
+
+    private void SisterRushToMom()
+    {
+        playerMovement.walkSpeed = 0;
+        playerMovement.sprintSpeed = 0;
+        phone.canUsePhone = false;
+        interaction.canInteract = false;
+        footsteps.shutUp = true;
+        NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToMom, 2f);
+        fatherComponent.currentDialogue = endFamilyGood2;
+        playerMovement.walkSpeed = 3;
+        playerMovement.sprintSpeed = 7;
+        phone.canUsePhone = true;
+        interaction.canInteract = true;
+        footsteps.shutUp = false;
+        fatherComponent.Interact();
+    }
+
+    private void PauseToEnd()
+    {
+        playerMovement.walkSpeed = 0;
+        playerMovement.sprintSpeed = 0;
+        footsteps.shutUp = true;
+        interaction.canInteract = false;
+        phone.canUsePhone = false;
     }
 
     public void RunTimerMethod(float delay, Action method)

@@ -13,13 +13,26 @@ MonoBehaviour:
   m_Name: FamilyDinner
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   lines:
-  - yayyy dinner yayyy (implement later)
+  - "\u201CWell Sylvia, the casserole looks delicious.\u201D"
+  - "\u201CThank you Harold.\u201D"
+  - "\u201C...\u201D"
+  - "\u201CSo are we just going to sit here and act like this is a normal dinner?\u201D"
+  - "\u201CAlice, don\u2019t be rude.\u201D"
+  - "\u201CNo it\u2019s ok, it\u2019s ok. Well Alice, what do you want to talk about?
+    I\u2019m sorry.\u201D"
+  - "\u201CWell\u2026\u201D"
+  - "\u201CI mean I don\u2019t really know, I\u2019m sorry dad.\u201D"
+  - "\u201CIt\u2019s fine Alice. How about you Joseph? Anything you want to talk
+    about?\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
-  speakingCharacterIndices: 00000000
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
+  speakingCharacterIndices: 010000000200000001000000030000000200000001000000030000000300000001000000
   emotionSpriteIndices: 00000000
-  onFinish: 0
-  branchToOpen: {fileID: 0}
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 887535b54c3151847bbd74a577466cb4, type: 2}
   onFinishScript:
     m_PersistentCalls:
       m_Calls: []

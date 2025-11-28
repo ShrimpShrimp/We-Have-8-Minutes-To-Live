@@ -17,10 +17,11 @@ public class Footsteps : MonoBehaviour
     public PlayerMovement playerController; // Reference to your movement script to check canMove
 
     private AudioClip currentClip;            // Clip currently playing (walk or sprint)
+    public bool shutUp = false;
 
     void Update()
     {
-        if (playerController == null || audioSource == null)
+        if (playerController == null || audioSource == null || shutUp)
             return;
 
         // If player cannot move, fade out and stop any sound

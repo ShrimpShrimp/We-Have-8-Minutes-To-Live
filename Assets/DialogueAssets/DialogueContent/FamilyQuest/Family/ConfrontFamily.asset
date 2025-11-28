@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: ConfrontFamily
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CAlice has a point. Why the hell are we acting so, I don\u2019t know, blase
+    about the literal end of the world?\u201D"
+  - "\u201CI mean there\u2019s a literal like, eldritch wall of death SCREAMING across
+    the horizon and we\u2019re just supposed to act like a family?\u201D"
+  - "\u201CYes, yes we fucking are son. We\u2019re going to act like a family because
+    it\u2019s something we can do.\u201D"
+  - " \u201CWhat do you want us to do? Go outside and scream angrily at it? What
+    else is there to do?\u201D"
+  - "\u201CGod forbid I want to spend my last moments on this earth happy with my
+    family. I was hoping that you\u2019d understand that.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 0000000000000000010000000100000001000000
+  emotionSpriteIndices: 0000000000000000090000000900000009000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: d60c922dbcb391349b62e9b87bf11998, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

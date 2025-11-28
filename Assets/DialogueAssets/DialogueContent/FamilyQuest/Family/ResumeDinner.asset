@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: ResumeDinner
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201C... I\u2019m sorry I snapped at you Joseph. Emotions are just running
+    high, sorry.\u201D"
+  - "\u201CYou know, it\u2019s kind of funny. I\u2019ve been saving up all year for
+    a big family vacation.\u201D "
+  - " \u201CRemember that hunting lodge down around Alaska you saw online and kept
+    talking about Joseph? I\u2019ve been saving a good amount of every check for
+    the past year to bring us all up there. I was gonna surprise you all with plane
+    tickets.\u201D"
+  - " \u201CDear God Harold, I\u2019m sorry.\u201D"
+  - "\u201CNo one\u2019s fault but my own I suppose. Heh, just another thing left
+    off the old bucket list.\u201D "
+  - "\u201CWell, any of you guys had any big bucket list plans?\u201D"
+  - "\u201CI always wanted to try molly.\u201D"
+  - "\u201CAlice! Watch yourself!\u201D"
+  - "\u201CWhat? I had a friend who did it at a concert one time and she said it
+    was great.\u201D "
+  - "\u201CYou know that can ruin your body right Alice? Drugs are bad for you.\u201D"
+  - "\u201CHow are you preaching longevity when we\u2019re all gonna die in a few
+    minutes? I mean if you ask me, having some bladder issues sounds like a good
+    trade for taking the orgasm pill.\u201D "
+  - "\u201CLanguage Alice!\u201D"
+  - "\u201CMy bad, my bad.\u201D"
+  - "\u201C...\u201D"
+  - "\u201C...\u201D"
+  - "\u201CHeh, we\u2019re not very good at keeping conversation going huh?\u201D"
+  - "\u201CI guess not.\u201D"
+  - "\u201CWell, I just want to say I love all of you, and I\u2019m very proud of
+    you two kids.\u201D "
+  - "\u201CYeah, wasted twelve years at grade school not even to get my high school
+    diploma, real achievement.\u201D"
+  - "\u201CYou were a good student though. That counts for something.\u201D"
+  - "\u201CYou\u2019re just incapable of grasping the end of the world huh?\u201D"
+  - "\u201CJust trying to look on the bright side.\u201D"
+  - "\u201CThere IS no bright side. I wasted a bunch of time on stupid stuff instead
+    of feeling good and now I\u2019m gonna die. This is some bullshit.\u201D"
+  - "\u201CYou know what they say, life\u2019s not fair.\u201D"
+  - "\u201CYeah it really fuckin isn\u2019t.\u201D"
+  - '"How about let''s just enjoy each other''s company for a while?"'
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
+  speakingCharacterIndices: 0100000001000000010000000200000001000000010000000300000002000000030000000200000003000000020000000300000002000000030000000100000000000000010000000300000001000000030000000100000003000000020000000300000001000000
+  emotionSpriteIndices: 0600000004000000020000000600000003000000010000000000000009000000070000000700000001000000090000000100000000000000000000000300000000000000040000000000000002000000010000000400000009000000000000000100000002000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: gamePauseTillEndFamily

@@ -30,6 +30,9 @@ public class PhoneManager : MonoBehaviour
     public BranchManager branchManager;
     public PlayerMovement playerMovement;
 
+    [Header("Phone Bool")]
+    public bool canUsePhone;
+
     void Start()
     {
         PopulateContacts();
@@ -45,7 +48,7 @@ public class PhoneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (!dialogueManager.dialogueActive && !branchManager.branchActive)
+            if (!dialogueManager.dialogueActive && !branchManager.branchActive && canUsePhone)
             {
                 phonePanel.SetActive(!phonePanel.activeSelf);
             }

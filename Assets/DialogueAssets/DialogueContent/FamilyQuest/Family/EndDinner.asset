@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: EndDinner
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CNo, that\u2019s bullshit.\u201D"
+  - "\u201CI GAVE you my last moments. Other people wanted to see me, and now they
+    don\u2019t get a chance to.\u201D"
+  - " \u201CJoseph please just enjoy dinner ok?\u201D"
+  - "\u201CI don\u2019t want us to argue during this. Just try to enjoy it.\u201D"
+  - "\u201C...\u201D"
+  - "\u201C...\u201D"
+  - " \u201CSylvia, did you remember to turn off the oven?\u201D"
+  - "\u201CReally Harold?\u201D"
+  - "\u201CSorry, you\u2019re right.\u201D"
+  - "\u201C...\u201D"
+  - "\u201C...\u201D"
+  - " \u201CFuck this I\u2019m done. I\u2019m gonna find something more meaningful
+    to do for my last few minutes, have fun.\u201D"
+  - "\u201CYeah he\u2019s right. See ya on the other side.\u201D"
+  - "\u201CYou stay right here young lady! Right now!\u201D"
+  - "\u201CWhat are you gonna ground me? Spank me? I\u2019m leaving, deal with it.\u201D"
+  - "\u201CHarold?? Stop her!\u201D"
+  - "\u201C...\u201D"
+  - "(He\u2019s frozen in shock. Tears dot the corners of his eyes.)"
+  - (Great job dumbass. You just made your dad cry.)
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
+  speakingCharacterIndices: 00000000000000000200000002000000030000000000000001000000020000000100000002000000010000000000000003000000020000000300000002000000010000000000000000000000
+  emotionSpriteIndices: 00000000000000000500000004000000060000000000000006000000090000000400000000000000000000000000000001000000090000000900000007000000070000000000000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: EndDinnerEarly

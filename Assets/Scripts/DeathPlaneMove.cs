@@ -8,6 +8,7 @@ public class DeathPlaneMove : MonoBehaviour
     [Header("Activation Settings")]
     public float activateAfterSeconds = 3f;
     public GameObject objectToActivate;
+    public float remainingTime;
 
     [Header("Spawn Settings")]
     public Transform player;              // Assign player here
@@ -44,14 +45,14 @@ public class DeathPlaneMove : MonoBehaviour
 
     private IEnumerator ActivateAfterDelay()
     {
-        float remaining = activateAfterSeconds;
+        remainingTime = activateAfterSeconds;
 
         // countdown loop
-        while (remaining > 0f)
+        while (remainingTime > 0f)
         {
             if (timerText != null)
             {
-                int totalSeconds = Mathf.CeilToInt(remaining);
+                int totalSeconds = Mathf.CeilToInt(remainingTime);
                 int minutes = totalSeconds / 60;
                 int seconds = totalSeconds % 60;
 
@@ -65,7 +66,7 @@ public class DeathPlaneMove : MonoBehaviour
 
 
 
-            remaining -= Time.deltaTime;
+            remainingTime -= Time.deltaTime;
             yield return null;
         }
 
