@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: DefeatedEnding
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CWell well well, look what the cat dragged in.\u201D"
+  - "\u201CLooking to squeeze a bit of sympathy out of your family?\u201D"
+  - "\u201CYour sister\u2019s gone off to God knows where and your mother is holed
+    up in her room. I\u2019m just out here trying to enjoy the last bit of my day.\u201D"
+  - "\u201CSeems like a waste of time to argue though. Join me.\u201D"
+  - "\u201C............\u201D"
+  - "\u201CI know we don\u2019t always get along, but I\u2019m proud of you son.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 000000000000000000000000000000000000000000000000
+  emotionSpriteIndices: 040000000900000006000000040000000500000004000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: RepeatDadEnding

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: 9ebb62c5a1196614380fa3f036e627f4
+  - enabled: 1
+    path: Assets/Scenes/PlaceholderCutscene.unity
+    guid: 9d382959b9904214c83c47bcef488571
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -29,6 +29,8 @@ public class PhoneManager : MonoBehaviour
     public DialogueManager dialogueManager;
     public BranchManager branchManager;
     public PlayerMovement playerMovement;
+    public DialogueComponent playerComponent;
+    public DialogueAsset brokenDialogue;
 
     [Header("Phone Bool")]
     public bool canUsePhone = true;
@@ -48,26 +50,30 @@ public class PhoneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (!dialogueManager.dialogueActive && !branchManager.branchActive && canUsePhone)
-            {
-                phonePanel.SetActive(!phonePanel.activeSelf);
-            }
-            if (phonePanel.activeSelf)
-            {
-                playerMovement.canLook = false;
-                playerMovement.canMove = false;
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-            } else
-            {
-                playerMovement.canLook = true;
-                playerMovement.canMove = true;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            PhoneOnOff();
         }
+    }
 
-        
+    private void PhoneOnOff()
+    {
+        if (!dialogueManager.dialogueActive && !branchManager.branchActive && canUsePhone)
+        {
+            phonePanel.SetActive(!phonePanel.activeSelf);
+        }
+        if (phonePanel.activeSelf)
+        {
+            playerMovement.canLook = false;
+            playerMovement.canMove = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            playerMovement.canLook = true;
+            playerMovement.canMove = true;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     void PopulateContacts()
@@ -133,11 +139,17 @@ public class PhoneManager : MonoBehaviour
     public void CallGirlfriend()
     {
         Debug.Log("Calling girlfriend");
+        playerComponent.currentDialogue = brokenDialogue;
+        PhoneOnOff();
+        playerComponent.Interact();
         // You can open a dialogue or trigger whatever here
     }
 
     public void CallMom()
     {
+        playerComponent.currentDialogue = brokenDialogue;
+        PhoneOnOff();
+        playerComponent.Interact();
         Debug.Log("Calling mom");
     }
 }
