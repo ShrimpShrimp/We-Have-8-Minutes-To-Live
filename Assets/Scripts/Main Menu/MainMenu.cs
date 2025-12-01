@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
         && !Input.GetMouseButtonDown(1) 
         && !Input.GetMouseButtonDown(2)){
             isGameStarted = true;
-            SceneManager.LoadScene("MainGame");
+            SceneManager.LoadScene("PlaceholderCutscene");
         }
     } 
 
