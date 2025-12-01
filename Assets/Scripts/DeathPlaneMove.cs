@@ -18,6 +18,16 @@ public class DeathPlaneMove : MonoBehaviour
     public float moveSpeed = 5f;
     private bool canMove = false;
 
+    [Header("Visual FX")]
+    public Renderer objectRenderer;  // Assign the object's renderer
+    public float fadeDuration = 2f;  // Seconds to fade in
+    public bool scrollTexture = true;
+    public float scrollSpeedX = 0.1f;
+    public float scrollSpeedY = 0f;
+
+    private Material objectMaterial;
+    private bool fadeComplete = false;
+
 
     [Header("UI Object")]
     public TextMeshProUGUI timerText;
@@ -82,6 +92,20 @@ public class DeathPlaneMove : MonoBehaviour
             Vector3 worldSpawnPosition = player.position + offsetFromPlayer;
             objectToActivate.transform.position = worldSpawnPosition;
             objectToActivate.SetActive(true);
+
+            // prepare fading & scrolling
+            if (objectRenderer != null)
+            {
+                objectMaterial = objectRenderer.material;
+
+                // Start fully transparent
+                Color c = objectMaterial.color;
+                c.a = 0f;
+                objectMaterial.color = c;
+
+                StartCoroutine(FadeInMaterial());
+            }
+
         }
 
         canMove = true;
@@ -93,6 +117,14 @@ public class DeathPlaneMove : MonoBehaviour
         {
             objectToActivate.transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
         }
+
+        if (scrollTexture && objectMaterial != null)
+        {
+            Vector2 offset = objectMaterial.mainTextureOffset;
+            offset.x += scrollSpeedX * Time.deltaTime;
+            offset.y += scrollSpeedY * Time.deltaTime;
+            objectMaterial.mainTextureOffset = offset;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -102,5 +134,33 @@ public class DeathPlaneMove : MonoBehaviour
             Debug.Log("Game should end here.");
             SceneManager.LoadScene("EndMenu");
         }
+    }
+
+    private IEnumerator FadeInMaterial()
+    {
+        float t = 0f;
+        fadeComplete = false;
+
+        // Get current color (including alpha)
+        Color start = objectMaterial.GetColor("_Color");
+        Color end = start;
+        end.a = 1f;
+
+        // Start from alpha 0
+        start.a = 0f;
+        objectMaterial.SetColor("_Color", start);
+
+        while (t < fadeDuration)
+        {
+            float progress = t / fadeDuration;
+            Color lerped = Color.Lerp(start, end, progress);
+            objectMaterial.SetColor("_Color", lerped);
+
+            t += Time.deltaTime;
+            yield return null;
+        }
+
+        objectMaterial.SetColor("_Color", end);
+        fadeComplete = true;
     }
 }
