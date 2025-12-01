@@ -43,6 +43,8 @@ public class FamilyQuest : MonoBehaviour
     public DialogueAsset sisDot;
     public DialogueAsset sisNotCome;
     public DialogueAsset endFamilyBad;
+    public DialogueAsset defeatedEnding;
+    public DialogueAsset repeatDadEnding;
 
     [Header("Sprites and Renderers")]
     public SpriteRenderer sisterSprite;
@@ -57,9 +59,11 @@ public class FamilyQuest : MonoBehaviour
     public Vector3 sisTable = new Vector3(-6.034f, -0.898f, -10.977f);
     public Vector3 momTable = new Vector3(-7.04f, -0.898f, -10.977f);
     public Vector3 dadTable = new Vector3(-8.342f, -0.898f, -12.397f);
-    public Vector3 frontDoor = new Vector3(3.443f, -0.898f, -3.102f); //get this location
-    public Vector3 nextToRicky = new Vector3(-0.06f, -0.898f, 6.86f); //also get this location
-    public Vector3 nextToMom = new Vector3(-6.462f, -0.898f, -10.977f); //get this location
+    public Vector3 frontDoor = new Vector3(3.443f, -0.898f, -3.102f);
+    public Vector3 nextToRicky = new Vector3(-0.06f, -0.898f, 6.86f); //get this location
+    public Vector3 nextToMom = new Vector3(-6.462f, -0.898f, -10.977f);
+    public Vector3 outFrontDoor = new Vector3(0f, -0.898f, 0f);
+    public Vector3 momRoom = new Vector3(0f, -0.898f, 0f);
 
     [Header("Timings and location check")]
     public float setTableTime = 360f;
@@ -68,6 +72,7 @@ public class FamilyQuest : MonoBehaviour
     public bool insideHouse = true;
     private bool missedDinner = false;
     private bool sisterUpset = false;
+    private bool familyUpset = false;
 
     [Header("Script References")]
     public PlayerMovement playerMovement;
@@ -99,6 +104,7 @@ public class FamilyQuest : MonoBehaviour
         EventManager.StartListening("SisterNotCome", SisterNotCome);
         EventManager.StartListening("GamePauseTillEndParents", GamePauseTillEndParents);
         RunTimerMethod(tooLateTime, TooLateDinner);
+        EventManager.StartListening("RepeatDadEnding", RepeatDadEnding);
     }
 
     private void TwoIntroParents()
@@ -108,7 +114,6 @@ public class FamilyQuest : MonoBehaviour
         sisterComponent.currentDialogue = oneSisterEarly;
         NPCMoveToSpot.MoveToPosition(this, motherTransform, kitchenDoor, 4f);
         NPCMoveToSpot.MoveToPosition(this, motherTransform, kitchenSpot, 4f);
-        //move mom to kitchen
     }
 
     private void OneDadEarly()
@@ -163,6 +168,7 @@ public class FamilyQuest : MonoBehaviour
         } else
         {
             missedDinner = true;
+            familyUpset = true;
             Debug.Log("You missed dinner.");
             NPCMoveToSpot.MoveToPosition(this, sisterTransform, bedDoor, 6f);
             NPCMoveToSpot.MoveToPosition(this, sisterTransform, bedSpot, 6f);
@@ -245,6 +251,7 @@ public class FamilyQuest : MonoBehaviour
 
     private void EndDinnerEarly()
     {
+        familyUpset = true;
         fatherComponent.currentDialogue = familyPleaseStay;
         motherComponent.currentDialogue = familyPleaseStay;
         NPCMoveToSpot.MoveToPosition(this, sisterTransform, frontDoor, 6f);
@@ -307,6 +314,7 @@ public class FamilyQuest : MonoBehaviour
         sisterComponent.currentDialogue = sisDot;
         fatherComponent.currentDialogue = sisNotCome;
         motherComponent.currentDialogue = sisNotCome;
+        familyUpset = false;
     }
 
     private void GamePauseTillEndParents()
@@ -335,7 +343,22 @@ public class FamilyQuest : MonoBehaviour
 
     private void TooLateDinner()
     {
-        Debug.Log("You completely missed everything. Implement.");
+        if (familyUpset)
+        {
+            Debug.Log("You completely missed everything + family is upset. Implement.");
+            NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToRicky, 6f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, outFrontDoor, 4f);
+            fatherComponent.currentDialogue = defeatedEnding;
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, momRoom, 6f);
+        } else
+        {
+            Debug.Log("You missed everything + family is not upset.");
+        }
+    }
+
+    private void RepeatDadEnding()
+    {
+        fatherComponent.currentDialogue = repeatDadEnding;
     }
 
     public void RunTimerMethod(float delay, Action method)
