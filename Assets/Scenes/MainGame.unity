@@ -12485,10 +12485,13 @@ MonoBehaviour:
   messageBubblePrefab: {fileID: 8744059623311131992, guid: 33a275a0118071c4ea7d47b362a30532, type: 3}
   contacts:
   - {fileID: 11400000, guid: e763fa27b74b42645a4205c06485c884, type: 2}
+  - {fileID: 11400000, guid: e3ed07bbb34751549b24c26c04a337b8, type: 2}
   - {fileID: 11400000, guid: 8b01af02baf9c9a4e83c862da1f55598, type: 2}
-  - {fileID: 11400000, guid: 67705b2f636a6754fa9fd4b3f49de0dd, type: 2}
-  - {fileID: 11400000, guid: d2f911533caa817449b3208ba24401ec, type: 2}
   - {fileID: 11400000, guid: 4bb5d75bd38e5394892c1da07028a5b1, type: 2}
+  - {fileID: 11400000, guid: 39d2ec10aad0a364988be7568b26a928, type: 2}
+  - {fileID: 11400000, guid: 3ef63668459cfad4ab252e9ef95ca5c1, type: 2}
+  - {fileID: 11400000, guid: d2f911533caa817449b3208ba24401ec, type: 2}
+  - {fileID: 11400000, guid: 67705b2f636a6754fa9fd4b3f49de0dd, type: 2}
   dialogueManager: {fileID: 1694075697}
   branchManager: {fileID: 1694075696}
   playerMovement: {fileID: 1487202698}
@@ -12496,6 +12499,7 @@ MonoBehaviour:
   brokenDialogue: {fileID: 11400000, guid: ec382017e8eb9f64987358f2148bebc9, type: 2}
   callFamily: {fileID: 11400000, guid: 75f59560d11b32140939bf90fde8f9ff, type: 2}
   groupChatCall: {fileID: 11400000, guid: c343c71987a4139468c396d0851517a2, type: 2}
+  friendsCall: {fileID: 11400000, guid: ea953fc49e632134c8252a5fb142ae1b, type: 2}
   canUsePhone: 1
 --- !u!1001 &1701903132
 PrefabInstance:

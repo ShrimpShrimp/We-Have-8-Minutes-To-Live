@@ -33,6 +33,7 @@ public class PhoneManager : MonoBehaviour
     public DialogueAsset brokenDialogue;
     public DialogueAsset callFamily;
     public DialogueAsset groupChatCall;
+    public DialogueAsset friendsCall;
 
     [Header("Phone Bool")]
     public bool canUsePhone = true;
@@ -45,10 +46,13 @@ public class PhoneManager : MonoBehaviour
         callButton.onClick.AddListener(OnCallButtonClicked);
 
         if (contacts.Count > 0) contacts[0].callAction = CallGirlfriend;
-        if (contacts.Count > 1) contacts[1].callAction = CallGC;
-        if (contacts.Count > 2) contacts[2].callAction = CallFamily;
+        if (contacts.Count > 1) contacts[1].callAction = CallFriends;
+        if (contacts.Count > 2) contacts[2].callAction = CallGC;
         if (contacts.Count > 3) contacts[3].callAction = CallFamily;
-        if (contacts.Count > 4) contacts[4].callAction = CallFamily;
+        if (contacts.Count > 4) contacts[4].callAction = CallFriends;
+        if (contacts.Count > 5) contacts[5].callAction = CallFriends;
+        if (contacts.Count > 6) contacts[6].callAction = CallFamily;
+        if (contacts.Count > 7) contacts[7].callAction = CallFamily;
     }
 
     void Update()
@@ -162,6 +166,14 @@ public class PhoneManager : MonoBehaviour
         playerComponent.currentDialogue = callFamily;
         PhoneOnOff();
         playerComponent.Interact();
-        Debug.Log("Calling mom");
+        Debug.Log("Calling family");
+    }
+
+    public void CallFriends()
+    {
+        playerComponent.currentDialogue = friendsCall;
+        PhoneOnOff();
+        playerComponent.Interact();
+        Debug.Log("Calling friends");
     }
 }
