@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: WinningEnding
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHey son.\u201D"
+  - "\u201CMom is in her room right now, wanted a second to call her mother. Thought
+    it was only fair.\u201D"
+  - "\u201COnly way to face the end is alone anyways, at least that\u2019s what I
+    heard.\u201D"
+  - "\u201CI dunno if that covers situations like this though.\u201D"
+  - "\u201CI know I\u2019ve been harsh on you and your sister, and I\u2019m sorry.\u201D"
+  - "\u201CI really just always wanted what was best for y\u2019all, and I\u2019m
+    proud of both of you.\u201D"
+  - "\u201CI let her go see her boyfriend. Realized it was pointless squabbling over
+    something like that, better to see her happy anyways.\u201D"
+  - "\u201CNeighborhood looks real pretty when you really appreciate it huh?\u201D"
+  characters:
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  speakingCharacterIndices: 0000000000000000000000000000000000000000000000000000000000000000
+  emotionSpriteIndices: 0200000004000000050000000900000005000000040000000100000002000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: RepeatDadEnding

@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: FamilyDot
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   lines:
-  - '"..."'
+  - "\u201C....................\u201D"
+  - "\u201CWell, I can tell the energy is a bit off in the room.\u201D"
+  - "\u201C...................\u201D"
+  - "\u201C...................\u201D"
+  - "\u201CHow about we just have a little time to ourselves alright? It\u2019ll
+    probably be good for us anyways.\u201D"
+  - "\u201CJust be back right before the end Joseph, please.\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
-  speakingCharacterIndices: 00000000
-  emotionSpriteIndices: 00000000
+  - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
+  - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
+  speakingCharacterIndices: 000000000100000002000000010000000100000001000000
+  emotionSpriteIndices: 000000000100000000000000000000000400000006000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

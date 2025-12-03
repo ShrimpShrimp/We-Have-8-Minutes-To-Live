@@ -9149,6 +9149,9 @@ MonoBehaviour:
   endFamilyBad: {fileID: 11400000, guid: 6f9aa4cc67b8e924bb90bb6f12a3f9b6, type: 2}
   defeatedEnding: {fileID: 11400000, guid: 2d670a61e0ade114fabadbb06b8ed3bc, type: 2}
   repeatDadEnding: {fileID: 11400000, guid: ab39f0beea85d9148b118962078bd783, type: 2}
+  winningEnding: {fileID: 11400000, guid: 3263cd8c3b19c15489e9e6e86ed31e42, type: 2}
+  theEnd: {fileID: 11400000, guid: 7e0a416969ac26a428a51e1a81954f12, type: 2}
+  familyFreed: {fileID: 11400000, guid: 5af7d67c41645d9448fe8061a08255af, type: 2}
   sisterSprite: {fileID: 598238643}
   sisterCryingSprite: {fileID: 21300000, guid: 9af47528e429f3142aa8557e4b1ac4a6, type: 3}
   kitchenDoor: {x: -0.909, y: -0.898, z: -6.707}
@@ -12482,12 +12485,17 @@ MonoBehaviour:
   messageBubblePrefab: {fileID: 8744059623311131992, guid: 33a275a0118071c4ea7d47b362a30532, type: 3}
   contacts:
   - {fileID: 11400000, guid: e763fa27b74b42645a4205c06485c884, type: 2}
+  - {fileID: 11400000, guid: 8b01af02baf9c9a4e83c862da1f55598, type: 2}
   - {fileID: 11400000, guid: 67705b2f636a6754fa9fd4b3f49de0dd, type: 2}
+  - {fileID: 11400000, guid: d2f911533caa817449b3208ba24401ec, type: 2}
+  - {fileID: 11400000, guid: 4bb5d75bd38e5394892c1da07028a5b1, type: 2}
   dialogueManager: {fileID: 1694075697}
   branchManager: {fileID: 1694075696}
   playerMovement: {fileID: 1487202698}
   playerComponent: {fileID: 1487202710}
   brokenDialogue: {fileID: 11400000, guid: ec382017e8eb9f64987358f2148bebc9, type: 2}
+  callFamily: {fileID: 11400000, guid: 75f59560d11b32140939bf90fde8f9ff, type: 2}
+  groupChatCall: {fileID: 11400000, guid: c343c71987a4139468c396d0851517a2, type: 2}
   canUsePhone: 1
 --- !u!1001 &1701903132
 PrefabInstance:

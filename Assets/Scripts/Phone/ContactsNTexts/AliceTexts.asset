@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd20e99b99677046a97ee491c9280ec, type: 3}
-  m_Name: GirlfriendTexts
+  m_Name: AliceTexts
   m_EditorClassIdentifier: Assembly-CSharp::TextsAsset
   messages:
-  - 'You: hey hon hru'
-  - 'Steph <3: im doing alr hbu'
-  - 'You: i luv u beautiful girlie'
-  - 'Steph <3: luv u too handsome'
-  - 'Steph <3: joseph please call me right now'
+  - 'Alice: dude can you ask eve to bring her pen to the party'
+  - 'You: no alice, ur 17 years old'
+  - 'Alice: dont bullshit me ik ur ass was hittin that yart in highschool'
+  - 'You: do what i say, not what i do'
+  - 'Alice: alright dad'

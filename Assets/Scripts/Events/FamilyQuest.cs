@@ -45,6 +45,9 @@ public class FamilyQuest : MonoBehaviour
     public DialogueAsset endFamilyBad;
     public DialogueAsset defeatedEnding;
     public DialogueAsset repeatDadEnding;
+    public DialogueAsset winningEnding;
+    public DialogueAsset theEnd;
+    public DialogueAsset familyFreed;
 
     [Header("Sprites and Renderers")]
     public SpriteRenderer sisterSprite;
@@ -67,7 +70,7 @@ public class FamilyQuest : MonoBehaviour
 
     [Header("Timings and location check")]
     public float setTableTime = 360f;
-    public float tooLateTime = 420f;
+    public float tooLateTime = 450f;
     public bool canCallDinner = true;
     public bool insideHouse = true;
     private bool missedDinner = false;
@@ -261,52 +264,43 @@ public class FamilyQuest : MonoBehaviour
 
     private void GamePauseTillEndFamily()
     {
+        fatherComponent.currentDialogue = familyFreed;
+        motherComponent.currentDialogue = familyFreed;
+        sisterComponent.currentDialogue = familyFreed;
         StartCoroutine(GamePauseTillEndFamilyRoutine());
     }
 
     private IEnumerator GamePauseTillEndFamilyRoutine()
     {
-        fatherComponent.currentDialogue = endFamilyGood;
-        playerMovement.walkSpeed = 0;
-        playerMovement.sprintSpeed = 0;
-        phone.canUsePhone = false;
-        interaction.canInteract = false;
-        footsteps.shutUp = true;
         // Wait until the death timer hits exactly 30
         yield return new WaitUntil(() => deathTimer.remainingTime <= 30f);
+        fatherComponent.currentDialogue = endFamilyGood;
         Debug.Log("Pause for family over");
-        phone.canUsePhone = true;
-        playerMovement.walkSpeed = 3;
-        playerMovement.sprintSpeed = 7;
-        interaction.canInteract = true;
-        footsteps.shutUp = false;
-        fatherComponent.Interact();
+        if (insideHouse)
+        {
+            fatherComponent.Interact();
+        } else
+        {
+            Debug.Log("You missed everything + family is not upset.");
+            NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToRicky, 6f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, outFrontDoor, 4f);
+            fatherComponent.currentDialogue = winningEnding;
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, momRoom, 6f);
+        }
     }
 
     private void SisterRushToMom()
     {
-        playerMovement.walkSpeed = 0;
-        playerMovement.sprintSpeed = 0;
-        phone.canUsePhone = false;
-        interaction.canInteract = false;
-        footsteps.shutUp = true;
         NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToMom, 2f);
         fatherComponent.currentDialogue = endFamilyGood2;
-        playerMovement.walkSpeed = 3;
-        playerMovement.sprintSpeed = 7;
-        phone.canUsePhone = true;
-        interaction.canInteract = true;
-        footsteps.shutUp = false;
         fatherComponent.Interact();
     }
 
     private void PauseToEnd()
     {
-        playerMovement.walkSpeed = 0;
-        playerMovement.sprintSpeed = 0;
-        footsteps.shutUp = true;
-        interaction.canInteract = false;
-        phone.canUsePhone = false;
+        fatherComponent.currentDialogue = theEnd;
+        sisterComponent.currentDialogue = sisDot;
+        motherComponent.currentDialogue = theEnd;
     }
 
     private void SisterNotCome()
@@ -319,26 +313,30 @@ public class FamilyQuest : MonoBehaviour
 
     private void GamePauseTillEndParents()
     {
+        fatherComponent.currentDialogue = familyFreed;
+        motherComponent.currentDialogue = familyFreed;
         StartCoroutine(GamePauseTillParentsRoutine());
     }
 
     private IEnumerator GamePauseTillParentsRoutine()
     {
-        fatherComponent.currentDialogue = endFamilyBad;
-        playerMovement.walkSpeed = 0;
-        playerMovement.sprintSpeed = 0;
-        phone.canUsePhone = false;
-        interaction.canInteract = false;
-        footsteps.shutUp = true;
         // Wait until the death timer hits exactly 30
         yield return new WaitUntil(() => deathTimer.remainingTime <= 30f);
         Debug.Log("Pause for family over");
-        phone.canUsePhone = true;
-        playerMovement.walkSpeed = 3;
-        playerMovement.sprintSpeed = 7;
-        interaction.canInteract = true;
-        footsteps.shutUp = false;
-        fatherComponent.Interact();
+        fatherComponent.currentDialogue = endFamilyBad;
+        motherComponent.currentDialogue = endFamilyBad;
+        sisterComponent.currentDialogue = familyFreed;
+        if (insideHouse)
+        {
+            fatherComponent.Interact();
+        } else
+        {
+            Debug.Log("You completely missed everything + family is upset. Implement.");
+            NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToRicky, 6f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, outFrontDoor, 4f);
+            fatherComponent.currentDialogue = defeatedEnding;
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, momRoom, 6f);
+        }
     }
 
     private void TooLateDinner()
@@ -350,9 +348,13 @@ public class FamilyQuest : MonoBehaviour
             NPCMoveToSpot.MoveToPosition(this, fatherTransform, outFrontDoor, 4f);
             fatherComponent.currentDialogue = defeatedEnding;
             NPCMoveToSpot.MoveToPosition(this, motherTransform, momRoom, 6f);
-        } else
+        } else if (!familyUpset && !insideHouse)
         {
             Debug.Log("You missed everything + family is not upset.");
+            NPCMoveToSpot.MoveToPosition(this, sisterTransform, nextToRicky, 6f);
+            NPCMoveToSpot.MoveToPosition(this, fatherTransform, outFrontDoor, 4f);
+            fatherComponent.currentDialogue = winningEnding;
+            NPCMoveToSpot.MoveToPosition(this, motherTransform, momRoom, 6f);
         }
     }
 
