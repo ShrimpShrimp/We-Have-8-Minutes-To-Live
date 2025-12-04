@@ -23,11 +23,13 @@ MonoBehaviour:
   - "\u201CNo, remember we were gonna get to it next weekend together.\u201D"
   - "\u201COh yeah, sorry. Guess I forgot.\u201D"
   - "\u201CMhm.\u201D"
+  - (Spend years living with the man and despite everything neither of you can find
+    the words to show you care.)
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
   - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
-  speakingCharacterIndices: 01000000000000000100000000000000000000000100000001000000000000000100000000000000
-  emotionSpriteIndices: 01000000000000000200000000000000000000000000000004000000000000000100000000000000
+  speakingCharacterIndices: 0100000000000000010000000000000000000000010000000100000000000000010000000000000000000000
+  emotionSpriteIndices: 0100000000000000020000000000000000000000000000000400000000000000010000000000000000000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

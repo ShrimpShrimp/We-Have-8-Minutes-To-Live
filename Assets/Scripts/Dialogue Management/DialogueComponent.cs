@@ -9,6 +9,7 @@ public class DialogueComponent : Interactable
 
     public override void Interact()
     {
+        Debug.Log("Interacted");
         if (Time.time - lastInteractTime < interactCooldown)
             return;
 

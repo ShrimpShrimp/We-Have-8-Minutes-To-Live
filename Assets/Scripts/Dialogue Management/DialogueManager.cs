@@ -66,6 +66,8 @@ public class DialogueManager : MonoBehaviour
         dialogueActive = true;
         playerMovement.canMove = false;
         playerMovement.canLook = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         dialoguePanel.SetActive(true);
         phonePanel.SetActive(false);
         ShowLine();
@@ -75,6 +77,14 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentLineIndex >= currentDialogue.lines.Length)
         {
+            EndDialogue();
+            return;
+        }
+
+        if (currentDialogue.speakingCharacterIndices == null
+    || currentDialogue.speakingCharacterIndices.Length <= currentLineIndex)
+        {
+            Debug.LogWarning("SpeakingCharacterIndices array is null or shorter than current line index.");
             EndDialogue();
             return;
         }
@@ -207,6 +217,37 @@ public class DialogueManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void ForceCloseDialogueSafe()
+    {
+        StartCoroutine(ForceCloseCoroutine());
+    }
+
+    private IEnumerator ForceCloseCoroutine()
+    {
+        // Stop typing coroutine first if active
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
+        }
+
+        // Stop audio, but give it a tiny fade or delay
+        audioSource.Stop();
+
+        // Wait one frame before disabling UI
+        yield return null;
+
+        dialoguePanel.SetActive(false);
+
+        playerMovement.canMove = true;
+        playerMovement.canLook = true;
+
+        dialogueActive = false;
+        dialogueClosedTime = Time.time;
+
+        Debug.Log("Dialogue force-closed safely.");
     }
 
 }

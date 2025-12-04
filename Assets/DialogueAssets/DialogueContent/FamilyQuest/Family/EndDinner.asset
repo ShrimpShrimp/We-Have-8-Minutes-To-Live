@@ -43,7 +43,10 @@ MonoBehaviour:
   - "\u201CNo means no. I\u2019m done with this. You\u2019ve been like this my entire
     life and no means no. I\u2019m my own person, not a thing for you to hold onto.
     I\u2019m leaving.\u201D"
-  - "(He\u2019s frozen in shock. Tears dot the corners of his eyes.)"
+  - "(He\u2019s frozen in shock. Tears dot the corners of his eyes. Your mother is
+    reeling in terror, realizing all at once that the family she's devoted her entire
+    life to is leaving before her eyes in her last moments. She clung too hard and
+    now it's broken.)"
   - " \u201CYeah she\u2019s right. Sorry dad, I\u2019m leaving.\u201D"
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}

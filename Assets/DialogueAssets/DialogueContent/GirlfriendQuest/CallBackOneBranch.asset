@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db13c750a922bbb4eac1f12aec3fdac4, type: 3}
+  m_Name: CallBackOneBranch
+  m_EditorClassIdentifier: Assembly-CSharp::BranchAsset
+  choice1Text: I can stay.
+  choice1Dialogue: {fileID: 11400000, guid: f65ddbffc3eb7274baecaee1654cb646, type: 2}
+  choice2Text: I actually have to go.
+  choice2Dialogue: {fileID: 11400000, guid: ca8910ddd3b8e82438e1fd81e952f442, type: 2}

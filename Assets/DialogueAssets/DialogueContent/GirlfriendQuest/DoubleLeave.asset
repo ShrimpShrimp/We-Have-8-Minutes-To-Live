@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: DoubleLeave
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CYou\u2019re kidding me right?\u201D"
+  - "\u201CCalling me back just to leave AGAIN?\u201D"
+  - "\u201CFine. Call me back if you really want to talk. I\u2019ll be here.\u201D"
+  - "\u201CSteph I\u2019m sorry-\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 046f730a17a9bd5408b1ba5cb556838c, type: 2}
+  speakingCharacterIndices: 01000000010000000100000000000000
+  emotionSpriteIndices: 07000000090000000500000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: LateRecall

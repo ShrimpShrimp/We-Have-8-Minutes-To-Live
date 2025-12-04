@@ -16,14 +16,17 @@ MonoBehaviour:
   - "\u201CI\u2019m sorry for being so rude, I\u2019m so sorry\u2026\u201D"
   - "\u201CShhh, it\u2019s ok.. it\u2019s ok\u2026\u201D"
   - "\u201CSee Joseph, we\u2019re not totally nonfunctional.\u201D"
-  - "\u201CI love you guys. See you on the other side.\u201D"
+  - (You look over your family for one last time, realizing that this is the closest
+    you have ever felt. The dynamics of parent to child have crumbled, and all that's
+    left is to give each other the last vestiges of comfort you can scrounge up.)
+  - '"I love you guys. See you on the other side."'
   characters:
   - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
   - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
   - {fileID: 11400000, guid: e63b0851c9266154c901314660f0e5db, type: 2}
   - {fileID: 11400000, guid: a30dff9a125467549933bf5b4dc43359, type: 2}
-  speakingCharacterIndices: 03000000020000000100000000000000
-  emotionSpriteIndices: 05000000040000000200000000000000
+  speakingCharacterIndices: 0300000002000000010000000000000000000000
+  emotionSpriteIndices: 0500000004000000020000000000000000000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

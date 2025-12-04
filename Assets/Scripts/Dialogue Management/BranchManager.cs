@@ -60,4 +60,26 @@ public class BranchManager : MonoBehaviour
         if (nextDialogue != null)
             DialogueManager.Instance.StartDialogue(nextDialogue);
     }
+
+    public void ForceCloseBranchSafe()
+    {
+        if (!branchActive)
+            return; // nothing to close
+
+        // Hide branch UI
+        branchPanel.SetActive(false);
+
+        // Mark branch as inactive
+        branchActive = false;
+
+        // Restore player control
+        playerMovement.canMove = true;
+        playerMovement.canLook = true;
+
+        // Lock and hide cursor for gameplay
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        Debug.Log("Branch force-closed safely.");
+    }
 }

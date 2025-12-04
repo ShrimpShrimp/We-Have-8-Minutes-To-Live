@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: StephCallLoop
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CNo it\u2019s fine baby. I would rather spend time with you than anyone
+    else.\u201D"
+  - "\u201COh alright honey, if you say so.\u201D"
+  - (You see a wave of relief wash over her, her shoulders palpably releasing tension.
+    She needs you here.)
+  - "\u201CSo, what do you think this thing is anyways?\u201D"
+  - "\u201CA weapon sent from outerspace? Some experiment gone wrong?\u201D"
+  - "\u201CI mean there\u2019s no way to tell. But if you had to ask me? Nuclear
+    experiment gone wrong.\u201D"
+  - "\u201CThat\u2019s the leading theory?\u201D"
+  - " \u201CYeah. Remember Oppenheimer? They like, tried fusion and it\u2019s splitting
+    all of the atoms in the world.\u201D"
+  - "\u201CThat\u2019s really really dumb.\u201D"
+  - "\u201CAlright, big shot, your theory?\u201D"
+  - "\u201CUhhhhhh.\u201D"
+  - "\u201CGet back to me on that one.\u201D"
+  - "\u201CI\u2019ll make sure to ask you in the nuclear soup.\u201D"
+  - "\u201CI\u2019m sorry nuclear soup is just an extremely stupid sentence.\u201D"
+  - "\u201CWe can workshop it.\u201D"
+  - "\u201CNo your ass we can not. World ending, remember?\u201D"
+  - "\u201CShit you\u2019re right.\u201D"
+  - "\u201CLove you. Just throwing another one of those out there.\u201D"
+  - "\u201CLove you too, pretty girl.\u201D"
+  - "(The right words, you know they\u2019re the right words. Just not doing what
+    they\u2019re supposed to right now.)"
+  - "(You feel your love for her with all of your heart, so why aren\u2019t the words
+    giving you the peace that they should?)"
+  - "\u201CYou ok Joseph?\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 046f730a17a9bd5408b1ba5cb556838c, type: 2}
+  speakingCharacterIndices: 00000000010000000000000001000000010000000000000001000000000000000100000000000000010000000100000000000000010000000000000001000000000000000100000000000000000000000000000001000000
+  emotionSpriteIndices: 00000000020000000000000007000000010000000000000007000000000000000900000000000000080000000700000000000000000000000000000009000000000000000200000000000000000000000000000006000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 446a3b9e0e977eb4abb76283eae34825, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

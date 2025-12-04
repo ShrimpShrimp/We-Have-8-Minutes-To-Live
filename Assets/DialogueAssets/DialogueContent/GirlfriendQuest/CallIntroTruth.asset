@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: CallIntroTruth
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CSteph, I don\u2019t think anyone is.\u201D"
+  - "\u201CThe way that they\u2019re talking about this, it seems like this is the
+    end.\u201D"
+  - "\u201C........\u201D"
+  - "\u201CCan you please stay on the phone a little longer?\u201D"
+  - "\u201CI\u2019ll try my best. I\u2019m sorry Stephanie, but my family has been
+    asking me to have dinner with them and the guys are probably going to want to
+    hang out\u2026\u201D"
+  - "\u201CI know I know, but I really really need you. There\u2019s no one here.
+    Almost everyone is out of town for the weekend and I don\u2019t know I\u2019m
+    just\u2026\u201D"
+  - "\u201CLonely?\u201D"
+  - "\u201CTerrified mostly.\u201D"
+  - "\u201C..........\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 046f730a17a9bd5408b1ba5cb556838c, type: 2}
+  speakingCharacterIndices: 000000000000000001000000010000000000000001000000000000000100000000000000
+  emotionSpriteIndices: 000000000000000006000000050000000000000006000000000000000700000000000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: a93f30bae8e0cb04c9bd987c332ae9c6, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

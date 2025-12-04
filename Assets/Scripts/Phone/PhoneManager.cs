@@ -38,6 +38,9 @@ public class PhoneManager : MonoBehaviour
     [Header("Phone Bool")]
     public bool canUsePhone = true;
 
+    [Header("Script Refs")]
+    public GirlfriendQuest gfQuest;
+
     void Start()
     {
         PopulateContacts();
@@ -148,9 +151,8 @@ public class PhoneManager : MonoBehaviour
     public void CallGirlfriend()
     {
         Debug.Log("Calling girlfriend");
-        playerComponent.currentDialogue = brokenDialogue;
         PhoneOnOff();
-        playerComponent.Interact();
+        gfQuest.CallSteph();
     }
 
     public void CallGC()

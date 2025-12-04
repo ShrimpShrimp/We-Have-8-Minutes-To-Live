@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: LoveLoop
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CI love you.\u201D"
+  - "\u201CI love you too.\u201D"
+  - (A moment passes. Another weighty second careening away from you like cargo containers
+    tipping off a sinking ship.)
+  - (You try to tell her you love her again.)
+  - "\u201CI love you, I love you so much.\u201D"
+  - "\u201CI know honey, I love you too.\u201D"
+  - "(And then another second. You meant it this time, you\u2019re sure you did.)"
+  - "(And you know she means it too. So why isn\u2019t it helping?)"
+  - (Why do you feel this clenching, this heavy anxiety around this person?)
+  - (She looks at you, worry in her eyes. She feels the same, you know it.)
+  - "(It doesn\u2019t matter what either of you say. She isn\u2019t here, you aren\u2019t
+    there.)"
+  - (No words can bridge the gap distance creates.)
+  - "\u201CI love you. (?)\u201D"
+  - "\u201CI love you. (.)\u201D"
+  - "\u201CI love you. (.)\u201D"
+  - (And on and on it goes.)
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 046f730a17a9bd5408b1ba5cb556838c, type: 2}
+  speakingCharacterIndices: 00000000010000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010000000000000000000000
+  emotionSpriteIndices: 00000000040000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000040000000000000000000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 4c402a0f756ef9740a81b54372a6dd4e, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

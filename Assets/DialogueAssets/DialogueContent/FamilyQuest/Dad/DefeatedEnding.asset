@@ -19,11 +19,16 @@ MonoBehaviour:
     up in her room. I\u2019m just out here trying to enjoy the last bit of my day.\u201D"
   - "\u201CSeems like a waste of time to argue though. Join me.\u201D"
   - "\u201C............\u201D"
+  - (He's furious, heartbroken and every other step between. Realizing that despite
+    spending all of his life building this family, this object of pride, he can't
+    meaningfully get close. Like a painter seeing his masterpiece hung up in someone
+    else's home.)
   - "\u201CI know we don\u2019t always get along, but I\u2019m proud of you son.\u201D"
   characters:
   - {fileID: 11400000, guid: 0426bd4c957514a47bf65440e1a9c54e, type: 2}
-  speakingCharacterIndices: 000000000000000000000000000000000000000000000000
-  emotionSpriteIndices: 040000000900000006000000040000000500000004000000
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  speakingCharacterIndices: 00000000000000000000000000000000000000000100000000000000
+  emotionSpriteIndices: 04000000090000000600000004000000050000000000000004000000
   onFinish: 3
   branchToOpen: {fileID: 0}
   onFinishScript:

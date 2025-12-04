@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: StephCallIntro
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201COh my God Joseph did you see what was in the news???\u201D"
+  - "\u201CAre we going to be ok? What\u2019s happening? They said something about
+    some wall coming in like a few minutes???\u201D"
+  - "\u201CIt\u2019s alright, calm down. Let\u2019s just take a beat.\u201D"
+  - "\u201CJoseph, am I safe?\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 046f730a17a9bd5408b1ba5cb556838c, type: 2}
+  speakingCharacterIndices: 01000000010000000000000001000000
+  emotionSpriteIndices: 08000000060000000000000008000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 65511435319cfa7419630206d3ceb8f6, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: EndCall

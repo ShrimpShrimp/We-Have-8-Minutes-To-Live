@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: CallNotOk
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHonestly? No.\u201D"
+  - "\u201CI\u2019m stressed, scared and I don\u2019t know if I\u2019m doing anything
+    right.\u201D"
+  - "\u201CI mean, that makes sense. Not really possible to be doing anything right
+    or wrong in a time like this.\u201D"
+  - "\u201CIt all ends the same, so who cares what you do? Just do whatever you feel
+    is right.\u201D"
+  - "(A bit of a loaded sentence. She\u2019s implying you should stay with her.)"
+  - "\u201CYeah, I guess you\u2019re right.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 046f730a17a9bd5408b1ba5cb556838c, type: 2}
+  speakingCharacterIndices: 000000000000000001000000010000000000000000000000
+  emotionSpriteIndices: 000000000000000007000000040000000000000000000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: 5d30ada13e8c09a4ca71195b8bcc678d, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 
