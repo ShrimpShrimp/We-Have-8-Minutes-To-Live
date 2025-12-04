@@ -30,7 +30,7 @@ MonoBehaviour:
   speakingCharacterIndices: 010000000100000000000000010000000000000001000000010000000000000001000000
   emotionSpriteIndices: 090000000700000000000000090000000000000000000000060000000000000006000000
   onFinish: 1
-  branchToOpen: {fileID: 11400000, guid: 5d30ada13e8c09a4ca71195b8bcc678d, type: 2}
+  branchToOpen: {fileID: 11400000, guid: 446a3b9e0e977eb4abb76283eae34825, type: 2}
   onFinishScript:
     m_PersistentCalls:
       m_Calls: []
