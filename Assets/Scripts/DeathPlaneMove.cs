@@ -1,7 +1,8 @@
-using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor.Rendering.LookDev;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathPlaneMove : MonoBehaviour
 {
@@ -28,12 +29,18 @@ public class DeathPlaneMove : MonoBehaviour
     private Material objectMaterial;
     private bool fadeComplete = false;
 
+    public float delayBeforeLoad = 0.1f; // Small buffer after fade in (optional)
+
+    private bool triggered = false;
+
 
     [Header("UI Object")]
     public TextMeshProUGUI timerText;
     public Animator animator;
+    public FadePanel fadePanel;
     public int countdownAlarmTime = 10;
     private bool animationStarted = false;
+    
 
     void Start()
     {
@@ -132,8 +139,20 @@ public class DeathPlaneMove : MonoBehaviour
         if (other.CompareTag("DeathPlane"))
         {
             Debug.Log("Game should end here.");
-            SceneManager.LoadScene("EndMenu");
+            StartCoroutine(FadeThenLoad());
         }
+    }
+
+    private System.Collections.IEnumerator FadeThenLoad()
+    {
+        // Start fading in
+        fadePanel.FadeIn();
+
+        // Wait for the fade duration
+        yield return new WaitForSeconds(fadePanel.fadeDuration + delayBeforeLoad);
+
+        // Load next scene
+        SceneManager.LoadScene("EndMenu");
     }
 
     private IEnumerator FadeInMaterial()

@@ -17,7 +17,7 @@ MonoBehaviour:
   - "\u201CPeople need other people. Comradery is the spice of life.\u201D"
   - "\u201CNo one I\u2019d rather be spending my last minute with than my friends.\u201D"
   characters:
-  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: b1fe7fef4e6b10349877ad6072c672b2, type: 2}
   speakingCharacterIndices: 000000000000000000000000
   emotionSpriteIndices: 020000000100000004000000
   onFinish: 0

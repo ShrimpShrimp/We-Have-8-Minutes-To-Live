@@ -148,7 +148,7 @@ public class FriendsQuest : MonoBehaviour
     {
         if (!gotEve && tomSpoken)
         {
-            tomComponent.currentDialogue = tomNoPoint;
+            tomComponent.currentDialogue = tomNoPointTwo;
             benComponent.currentDialogue = benNoPoint;
         }
     }
