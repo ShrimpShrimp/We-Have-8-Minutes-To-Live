@@ -2055,16 +2055,16 @@ MonoBehaviour:
   characterId: Mom
   spriteRenderer: {fileID: 259602813}
   emotionSprites:
-  - {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
-  - {fileID: 21300000, guid: f0b376e02b3c6784ba2b9da0ed5a8ec9, type: 3}
-  - {fileID: 21300000, guid: f0b376e02b3c6784ba2b9da0ed5a8ec9, type: 3}
-  - {fileID: 21300000, guid: f0b376e02b3c6784ba2b9da0ed5a8ec9, type: 3}
-  - {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
-  - {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
-  - {fileID: 21300000, guid: f0b376e02b3c6784ba2b9da0ed5a8ec9, type: 3}
-  - {fileID: 21300000, guid: f0b376e02b3c6784ba2b9da0ed5a8ec9, type: 3}
-  - {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
-  - {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
+  - {fileID: 21300000, guid: 1251939831d92714c944314672958607, type: 3}
+  - {fileID: 21300000, guid: d874abbe1c0a6e8488f502feaa5b723a, type: 3}
+  - {fileID: 21300000, guid: 44cafe7ad8a0b264e9500dee68689ed1, type: 3}
+  - {fileID: 21300000, guid: a3dc5632e4405f644a2e537ae676acd4, type: 3}
+  - {fileID: 21300000, guid: 02d71a8f81cf0c945a85a3ad1af11f40, type: 3}
+  - {fileID: 21300000, guid: dc1b51df56732fc4baf1420a980dff0d, type: 3}
+  - {fileID: 21300000, guid: 593b192161b71464f8d2420c9258a6f1, type: 3}
+  - {fileID: 21300000, guid: b4646c653f6055f4fb7f08b8a99451b4, type: 3}
+  - {fileID: 21300000, guid: 12277056f60df5241b51471c2f13063e, type: 3}
+  - {fileID: 21300000, guid: ef8b68f4193f5254a946e1e9105078ba, type: 3}
   cameraTarget: {fileID: 259602808}
 --- !u!65 &259602812
 BoxCollider:
@@ -2134,7 +2134,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1251939831d92714c944314672958607, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteIdler
   dialogueManager: {fileID: 1694075697}
-  idleSprite: {fileID: 21300000, guid: 35c6cf18aca58854780fb2c11b4ef33a, type: 3}
+  idleSprite: {fileID: 21300000, guid: 1251939831d92714c944314672958607, type: 3}
 --- !u!1 &262348655
 GameObject:
   m_ObjectHideFlags: 0
@@ -12396,16 +12396,16 @@ MonoBehaviour:
   characterId: Dad
   spriteRenderer: {fileID: 1537493309}
   emotionSprites:
-  - {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
-  - {fileID: 21300000, guid: 59fce7c86b84af04ba8f305781650788, type: 3}
-  - {fileID: 21300000, guid: 59fce7c86b84af04ba8f305781650788, type: 3}
-  - {fileID: 21300000, guid: 59fce7c86b84af04ba8f305781650788, type: 3}
-  - {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
-  - {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
-  - {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
-  - {fileID: 21300000, guid: 59fce7c86b84af04ba8f305781650788, type: 3}
-  - {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
-  - {fileID: 21300000, guid: 59fce7c86b84af04ba8f305781650788, type: 3}
+  - {fileID: 21300000, guid: fb651168145a60c42824fe7b6697769b, type: 3}
+  - {fileID: 21300000, guid: fd8a3cb3caa914e4a90cc15fb49093d2, type: 3}
+  - {fileID: 21300000, guid: d32042034aab27647be0151d4b2b3ca7, type: 3}
+  - {fileID: 21300000, guid: 5680d8e4fae09ca4ab9e75a80ac87be8, type: 3}
+  - {fileID: 21300000, guid: 009af8b632cef584e9ced139e34b2c1e, type: 3}
+  - {fileID: 21300000, guid: 441417ded96cfc449b1ffc946fa56cb8, type: 3}
+  - {fileID: 21300000, guid: b3bba6ac6a2772f4bb018cb9f22ad954, type: 3}
+  - {fileID: 21300000, guid: 673d55d58dd45cb4cbd77713b305f977, type: 3}
+  - {fileID: 21300000, guid: a792f4a404a1ff148ad0b09716e47aff, type: 3}
+  - {fileID: 21300000, guid: e1cf1488aaea56e42b37fc2da1cac3d2, type: 3}
   cameraTarget: {fileID: 1537493303}
 --- !u!212 &1537493309
 SpriteRenderer:
@@ -12454,7 +12454,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb651168145a60c42824fe7b6697769b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12491,7 +12491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteIdler
   dialogueManager: {fileID: 1694075697}
-  idleSprite: {fileID: 21300000, guid: 34bbf1bb60b57bf4598e5348765a5001, type: 3}
+  idleSprite: {fileID: 21300000, guid: fb651168145a60c42824fe7b6697769b, type: 3}
 --- !u!1 &1546230985
 GameObject:
   m_ObjectHideFlags: 0
