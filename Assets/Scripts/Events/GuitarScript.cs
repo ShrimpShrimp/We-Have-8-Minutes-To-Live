@@ -12,6 +12,7 @@ public class GuitarScript : Interactable
     public FriendsQuest friendsQuest;
     public Footsteps footsteps;
     public PlayerInteraction interaction;
+    public PhoneManager phoneManager;
 
     [Header("GameObjects/Audio")]
     public AudioSource eight;
@@ -50,6 +51,7 @@ public class GuitarScript : Interactable
 
     private IEnumerator InteractRoutine()
     {
+        phoneManager.canUsePhone = false;
         interaction.canInteract = false;
         guitarUI.SetActive(true);
         playerMovement.walkSpeed = 0f;

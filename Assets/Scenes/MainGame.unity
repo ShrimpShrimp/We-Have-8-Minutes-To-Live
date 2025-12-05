@@ -3780,6 +3780,7 @@ MonoBehaviour:
   friendsQuest: {fileID: 1273554062}
   footsteps: {fileID: 1487202703}
   interaction: {fileID: 1487202700}
+  phoneManager: {fileID: 1694075699}
   eight: {fileID: 1282994319}
   briefWalk: {fileID: 1536560250}
   rage: {fileID: 908404136}
