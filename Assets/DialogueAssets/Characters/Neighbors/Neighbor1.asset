@@ -15,7 +15,7 @@ MonoBehaviour:
   characterId: Neighbor1
   characterName: Neighbor1
   textColor: {r: 1, g: 0.9538098, b: 0, a: 1}
-  typingSound: {fileID: 8300000, guid: ab39fe7e2444f134fbaaa29bc0c48bff, type: 3}
+  typingSound: {fileID: 8300000, guid: 028d7fb370533bd458d3fb6cccc3889b, type: 3}
   defaultSpriteIndex: 0
   defaultAltSpriteIndex: 1
   happySpriteIndex: 2

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea6dcc3ca4736054ea4f06441bc60b0e, type: 3}
-  m_Name: PlaceholderFriend
+  m_Name: Eve
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAsset
-  characterId: FakeFriend
-  characterName: FakeFriend
-  textColor: {r: 0.504717, g: 1, b: 0.55313855, a: 1}
-  typingSound: {fileID: 8300000, guid: 028d7fb370533bd458d3fb6cccc3889b, type: 3}
+  characterId: Eve
+  characterName: Eve
+  textColor: {r: 0, g: 1, b: 0.850698, a: 1}
+  typingSound: {fileID: 8300000, guid: d7caaa47f48a0824dbeb09a1e78acc33, type: 3}
   defaultSpriteIndex: 0
   defaultAltSpriteIndex: 1
   happySpriteIndex: 2

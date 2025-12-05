@@ -15,9 +15,14 @@ MonoBehaviour:
   characterId: Dad
   characterName: Harold Jeremiah
   textColor: {r: 0.01600071, g: 0.4056604, b: 0, a: 1}
-  typingSound: {fileID: 0}
+  typingSound: {fileID: 8300000, guid: 809f5869dc214254892d11fb3c3bf0c4, type: 3}
+  defaultSpriteIndex: 0
+  defaultAltSpriteIndex: 1
+  happySpriteIndex: 2
+  laughSpriteIndex: 3
+  bitterSweetSpriteIndex: 4
+  sadSpriteIndex: 3
+  worriedSpriteIndex: 6
+  shockedSpriteIndex: 7
   scaredSpriteIndex: 0
   angrySpriteIndex: 1
-  happySpriteIndex: 2
-  sadSpriteIndex: 3
-  talkingSpriteIndex: 4

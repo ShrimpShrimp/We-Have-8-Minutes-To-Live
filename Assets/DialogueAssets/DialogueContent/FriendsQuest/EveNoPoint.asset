@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: EveNoPoint
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CWell shit we\u2019re a bit late aren\u2019t we?\u201D"
+  - "\u201CSpose so. Sorry, I should have gotten you earlier.\u201D"
+  - "\u201CNah it\u2019s fine. Honestly, I\u2019m glad to be hanging with my friends
+    anyways.\u201D"
+  - "\u201CNow to get higher than a kite and wait for the world to end.\u201D"
+  - "\u201CCheers.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 169739fb78898c5479e6d74915d0279c, type: 2}
+  speakingCharacterIndices: 0100000000000000010000000100000000000000
+  emotionSpriteIndices: 0800000000000000020000000300000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: EveNoPointRepeat

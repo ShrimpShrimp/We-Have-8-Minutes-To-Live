@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
-  m_Name: FakeFriend1
+  m_Name: EveNoPointRepeat
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   lines:
-  - '"My son was just born like three days ago."'
-  - '"Really kind of hard to come to terms with this huh."'
-  - '"Wish my wife hadn''t thrown out the bottle of Jack."'
+  - "\u201CSee the time dilation helps, give me extra time.\u201D"
+  - "\u201CUh huh. Sure.\u201D"
   characters:
-  - {fileID: 11400000, guid: ae083ac0494893e489bc292624fc1025, type: 2}
-  speakingCharacterIndices: 000000000000000000000000
-  emotionSpriteIndices: 000000000000000000000000
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 169739fb78898c5479e6d74915d0279c, type: 2}
+  speakingCharacterIndices: 0100000000000000
+  emotionSpriteIndices: 0200000000000000
   onFinish: 0
   branchToOpen: {fileID: 0}
   onFinishScript:

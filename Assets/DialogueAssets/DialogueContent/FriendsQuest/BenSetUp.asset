@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: BenSetUp
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CSup Joseph.\u201D"
+  - "\u201CHey Ben.\u201D"
+  - "\u201CSetup ready?\u201D"
+  - "\u201CYep, got everything up and ready to go. I think we\u2019re gonna do one
+    of my new songs, I\u2019ll tell you about it when we\u2019re ready to rock.\u201D"
+  - "\u201CAlright sounds good maestro. Be back in a second.\u201D"
+  - "\u201CHurry it up, time is mortality.\u201D"
+  - "\u201CWeak play on words dude.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: f8d8c37205e634e4daad13807d3f9296, type: 2}
+  speakingCharacterIndices: 01000000000000000000000001000000000000000100000000000000
+  emotionSpriteIndices: 01000000000000000000000000000000000000000600000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: BenSetUpRepeat

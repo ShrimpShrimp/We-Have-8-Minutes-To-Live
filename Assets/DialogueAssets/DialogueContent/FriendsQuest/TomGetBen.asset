@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: TomGetBen
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHey come on man, didn\u2019t I tell you to go get Eve?\u201D"
+  - "\u201CWhat, you pull a Ben and forget how to get to her house again?\u201D"
+  - "\u201CI swear to god you guys need to shut up about that.\u201D"
+  - "\u201CYELLOW house. ACROSS from your house. TWO houses down.\u201D"
+  - "\u201CBe quick, we\u2019re setting shit up.\u201D"
+  characters:
+  - {fileID: 11400000, guid: b1fe7fef4e6b10349877ad6072c672b2, type: 2}
+  - {fileID: 11400000, guid: f8d8c37205e634e4daad13807d3f9296, type: 2}
+  speakingCharacterIndices: 0000000000000000010000000000000000000000
+  emotionSpriteIndices: 0900000007000000090000000700000001000000
+  onFinish: 0
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

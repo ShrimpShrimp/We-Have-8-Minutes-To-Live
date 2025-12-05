@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: EveDefault
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201COh hey what\u2019s up Joe.\u201D"
+  - "\u201CPlease don\u2019t call me that Eve.\u201D"
+  - "\u201CJoe.\u201D"
+  - "\u201CJo-jo.\u201D"
+  - "\u201CJoe mama.\u201D"
+  - "\u201CJesus Christ, Eve are you stoned?\u201D"
+  - "\u201CNuh uh.\u201D"
+  - "\u201CYou absolutely are, I can smell it.\u201D"
+  - "\u201CGod forbid a girlboss smokes a little weed before the end of the world.\u201D"
+  - "\u201CI mean I don\u2019t know, don\u2019t you want like a clear head for the
+    end?\u201D"
+  - "\u201CWhy in God\u2019s fuck would I want a clear head when I die?\u201D"
+  - "\u201CYou know fair point, don\u2019t know why I asked that.\u201D"
+  - "\u201CWanna hang out and stare at trees and smoke weed with me dude?\u201D"
+  - "\u201CSounds like a blast but you know I don\u2019t smoke and the trees are
+    kind of boring.\u201D"
+  - "\u201CA square to the end I guess. Suit yourself.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 169739fb78898c5479e6d74915d0279c, type: 2}
+  speakingCharacterIndices: 010000000000000001000000010000000100000001000000000000000100000000000000010000000000000001000000000000000100000000000000
+  emotionSpriteIndices: 010000000000000002000000020000000200000003000000000000000600000000000000090000000000000001000000000000000200000000000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: EveSpoken

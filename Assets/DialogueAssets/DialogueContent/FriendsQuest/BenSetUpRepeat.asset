@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
-  m_Name: FakeFriend1
+  m_Name: BenSetUpRepeat
   m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
   lines:
-  - '"My son was just born like three days ago."'
-  - '"Really kind of hard to come to terms with this huh."'
-  - '"Wish my wife hadn''t thrown out the bottle of Jack."'
+  - "\u201CTime is uhhhh\u2026.\u201D"
+  - "\u201CTime is of the essence? Wait, no that's already a saying.\u201D"
   characters:
-  - {fileID: 11400000, guid: ae083ac0494893e489bc292624fc1025, type: 2}
-  speakingCharacterIndices: 000000000000000000000000
-  emotionSpriteIndices: 000000000000000000000000
+  - {fileID: 11400000, guid: f8d8c37205e634e4daad13807d3f9296, type: 2}
+  speakingCharacterIndices: 0000000000000000
+  emotionSpriteIndices: 0600000001000000
   onFinish: 0
   branchToOpen: {fileID: 0}
   onFinishScript:

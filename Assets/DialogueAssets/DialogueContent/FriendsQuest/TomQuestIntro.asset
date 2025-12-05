@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: TomQuestIntro
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CUp and at\u2019em soldier.\u201D"
+  - "\u201CHappy to see me?\u201D"
+  - "\u201CReasonably.\u201D"
+  - "\u201COh come on dude, you said we would hang this weekend so here we are.\u201D"
+  - "\u201CWhat better time to have a jam sesh than the end of the world?\u201D"
+  - "\u201CYeah I know Tom, but I\u2019ve got a lot of people who want to spend time
+    and everything with me right now.\u201D"
+  - "\u201CWell rope me, Eve and Ben in on it too. Come on dude, we need you.\u201D"
+  - "\u201CYou\u2019re our lead vocalist and carry like 90% of the band\u2019s energy.\u201D"
+  - "\u201CI mean be honest, what\u2019s more fucking metal than blasting music at
+    the end of the world?\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: b1fe7fef4e6b10349877ad6072c672b2, type: 2}
+  speakingCharacterIndices: 010000000100000000000000010000000100000000000000010000000100000001000000
+  emotionSpriteIndices: 020000000300000000000000010000000200000000000000020000000600000009000000
+  onFinish: 1
+  branchToOpen: {fileID: 11400000, guid: f0188a0e5cf4670478ace9e68ef7216f, type: 2}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: 

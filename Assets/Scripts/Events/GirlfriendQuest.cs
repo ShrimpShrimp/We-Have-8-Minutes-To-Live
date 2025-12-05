@@ -52,10 +52,13 @@ public class GirlfriendQuest : MonoBehaviour
 
     private void Update()
     {
-        if (!stephPhone.activeSelf && !stephHappy && setToLate)
+        if (stephPhone != null)
         {
-            LateRecall();
-            setToLate = false;
+            if (!stephPhone.activeSelf && !stephHappy && setToLate)
+            {
+                LateRecall();
+                setToLate = false;
+            }
         }
     }
 

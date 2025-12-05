@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: YouGetEveTwo
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CHey Eve, Tom wants to jam at Ben\u2019s house.\u201D"
+  - "\u201CShit dude you mean the beige house to the LEFT of your house?\u201D"
+  - "\u201CYou guys are never gonna let him live that down huh?\u201D"
+  - "(She holds up both her hands, her fingers making an L formation. You see her
+    mouth the words \u201Cleft\u201D and \u201Cright\u201D while looking at each
+    one.)"
+  - "\u201CYeah alright I\u2019ll come.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 11400000, guid: 169739fb78898c5479e6d74915d0279c, type: 2}
+  speakingCharacterIndices: 0000000001000000000000000000000001000000
+  emotionSpriteIndices: 0000000007000000000000000000000001000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: GotEve

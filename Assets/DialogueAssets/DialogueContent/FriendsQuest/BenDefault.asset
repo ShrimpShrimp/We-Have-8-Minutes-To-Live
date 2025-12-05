@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a902dcba1054c43a05aa7a1cbce308, type: 3}
+  m_Name: BenDefault
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAsset
+  lines:
+  - "\u201CChrist Joseph, see that crazy shit on the news?\u201D"
+  - "\u201CYeah Ben. Trying to make my peace with it I guess.\u201D"
+  - "\u201CNah, fuck peace. This is some utter horseshit I say.\u201D"
+  - "\u201CWhat, so we\u2019re just supposed to bend over and let ourselves get ass-fucked
+    by fate because the wall of death just decided to spawn in?\u201D"
+  - "\u201CLanguage.\u201D"
+  - "\u201CNo genuinely fuck this shit. I wanted to get married, make some cash as
+    an artist, find creative fulfillment as a musician etc etc and now every step
+    I\u2019ve taken along the way has been for nothing.\u201D"
+  - "\u201CI\u2019m going, but I\u2019m going like a pissed off old man sitting on
+    his front porch in the face of those hurricanes they have in Florida and shit.\u201D"
+  - "\u201CAlright man, inspiring.\u201D"
+  - "\u201CFuck yeah it\u2019s inspiring. Rage, rage against the dying of the light
+    and shit.\u201D"
+  - "\u201CWhat?\u201D"
+  - "\u201CDylan Thomas? Famous poem? Whatever. It\u2019s cool.\u201D"
+  - "\u201CYeah sorry. Good luck, I love ya man.\u201D"
+  - "\u201CLove ya too dude.\u201D"
+  characters:
+  - {fileID: 11400000, guid: 98dbf797d2264ab438aa7233ab9419bb, type: 2}
+  - {fileID: 0}
+  speakingCharacterIndices: 01000000000000000100000001000000000000000100000001000000000000000100000000000000010000000000000001000000
+  emotionSpriteIndices: 08000000000000000100000009000000000000000500000003000000000000000200000000000000070000000000000004000000
+  onFinish: 3
+  branchToOpen: {fileID: 0}
+  onFinishScript:
+    m_PersistentCalls:
+      m_Calls: []
+  eventId: BenDefaultRepeat
