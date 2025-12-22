@@ -32,9 +32,9 @@ public class GuitarScript : Interactable
     public SpriteIdler benIdler;
     public SpriteIdler tomIdler;
     public SpriteIdler eveIdler;
-    public Sprite benPlay;
-    public Sprite evePlay;
-    public Sprite tomPlay;
+    public SpriteLooper eveLooper;
+    public SpriteLooper tomLooper;
+    public SpriteLooper benLooper;
 
     [Header("Transforms")]
     public Transform benTransform;
@@ -70,13 +70,13 @@ public class GuitarScript : Interactable
         keyboard.SetActive(false);
         bass.SetActive(false);
 
-        benIdler.idleSprite = benPlay;
-        tomIdler.idleSprite = tomPlay;
-        eveIdler.idleSprite = evePlay;
+        benIdler.enabled = false;
+        tomIdler.enabled = false;
+        eveIdler.enabled = false;
 
-        benRenderer.sprite = benPlay;
-        tomRenderer.sprite = tomPlay;
-        eveRenderer.sprite = evePlay;
+        benLooper.enabled = true;
+        tomLooper.enabled = true;
+        eveLooper.enabled = true;
 
         eight.volume = 0f;
         briefWalk.volume = 0f;

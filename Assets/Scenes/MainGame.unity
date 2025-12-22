@@ -3796,14 +3796,14 @@ MonoBehaviour:
   benIdler: {fileID: 492904752}
   tomIdler: {fileID: 1306893588}
   eveIdler: {fileID: 1214108993}
-  benPlay: {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  evePlay: {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  tomPlay: {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
+  eveLooper: {fileID: 1214108999}
+  tomLooper: {fileID: 1306893594}
+  benLooper: {fileID: 492904758}
   benTransform: {fileID: 492904751}
   tomTransform: {fileID: 1306893587}
   eveTransform: {fileID: 1214108992}
   keysPos: {x: -50.951, y: -0.898, z: -14.847}
-  bassPos: {x: -54.68, y: -0.898, z: -11.07}
+  bassPos: {x: -54.68, y: -0.837, z: -11.07}
   drumPos: {x: -51.65, y: -0.898, z: -11.07}
 --- !u!1 &451470150
 GameObject:
@@ -4375,6 +4375,7 @@ GameObject:
   - component: {fileID: 492904754}
   - component: {fileID: 492904753}
   - component: {fileID: 492904752}
+  - component: {fileID: 492904758}
   m_Layer: 3
   m_Name: Ben
   m_TagString: Untagged
@@ -4391,7 +4392,7 @@ Transform:
   m_GameObject: {fileID: 492904750}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -34.27, y: -1.027, z: 1.93}
+  m_LocalPosition: {x: -34.27, y: -0.837, z: 1.93}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4410,7 +4411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteIdler
   dialogueManager: {fileID: 1694075697}
-  idleSprite: {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
+  idleSprite: {fileID: 21300000, guid: c4d682910045edc4d812a388f241bca7, type: 3}
 --- !u!114 &492904753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4452,16 +4453,16 @@ MonoBehaviour:
   characterId: Ben
   spriteRenderer: {fileID: 492904757}
   emotionSprites:
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
-  - {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
+  - {fileID: 21300000, guid: c4d682910045edc4d812a388f241bca7, type: 3}
+  - {fileID: 21300000, guid: 5427bb0233c8944419ae8803fa8bf624, type: 3}
+  - {fileID: 21300000, guid: e9fc545085474cb44a4dd762ed2d00b3, type: 3}
+  - {fileID: 21300000, guid: 00412eee9b6c13b4788dd4183418bc18, type: 3}
+  - {fileID: 21300000, guid: 41d1e1c1bcb13ac4695a27be31f70df9, type: 3}
+  - {fileID: 21300000, guid: ad08c9a66b26c914d9c5dcdc09b62283, type: 3}
+  - {fileID: 21300000, guid: 95783ad2760d33c49974194880e92982, type: 3}
+  - {fileID: 21300000, guid: 28d94fea335da914da00fc3f44126dff, type: 3}
+  - {fileID: 21300000, guid: 8016179de8c12c1488632601ccbdc27d, type: 3}
+  - {fileID: 21300000, guid: e443d1146712fbc459bf17e21f71cb31, type: 3}
   cameraTarget: {fileID: 492904751}
 --- !u!65 &492904756
 BoxCollider:
@@ -4531,7 +4532,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e650819d395fc624e971c84c5990ca9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4d682910045edc4d812a388f241bca7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4542,6 +4543,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &492904758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492904750}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b344eef5ac9e48b469686608fddc8589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteLooper
+  targetSprite: {fileID: 492904757}
+  sprites:
+  - {fileID: 21300000, guid: d20f833db124b7343a9c41e55d891475, type: 3}
+  - {fileID: 21300000, guid: df032768c21c65d468821e07813c3f06, type: 3}
+  switchInterval: 0.5
+  dialogueManager: {fileID: 1694075697}
+  branchManager: {fileID: 1694075696}
 --- !u!1001 &498489596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5188,16 +5208,16 @@ MonoBehaviour:
   characterId: Sister
   spriteRenderer: {fileID: 598238643}
   emotionSprites:
-  - {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
-  - {fileID: 21300000, guid: 176dc97fbc1e3104a8e9aa7e8da15daa, type: 3}
-  - {fileID: 21300000, guid: 176dc97fbc1e3104a8e9aa7e8da15daa, type: 3}
-  - {fileID: 21300000, guid: 176dc97fbc1e3104a8e9aa7e8da15daa, type: 3}
-  - {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
-  - {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
-  - {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
-  - {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
-  - {fileID: 21300000, guid: 176dc97fbc1e3104a8e9aa7e8da15daa, type: 3}
-  - {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
+  - {fileID: 21300000, guid: d0dd0ab7ccfedee439b955a05ab124af, type: 3}
+  - {fileID: 21300000, guid: 74af1da7c32f7db41a57953508073733, type: 3}
+  - {fileID: 21300000, guid: 9c2af05c9f94207419ac519fa9f457d3, type: 3}
+  - {fileID: 21300000, guid: 9001d4e8a406d074db908d96f870d616, type: 3}
+  - {fileID: 21300000, guid: 1cca382292a7c0b4c9da6679076eda90, type: 3}
+  - {fileID: 21300000, guid: 60f971512f320874eb08878407d97ed3, type: 3}
+  - {fileID: 21300000, guid: 786ac402edb4c7e43aab0914dfbdab9f, type: 3}
+  - {fileID: 21300000, guid: 397e72d3fbc540c46b4836ba267d1b47, type: 3}
+  - {fileID: 21300000, guid: 688387a9c2fd4ce4aaf7dcc02a11cb4b, type: 3}
+  - {fileID: 21300000, guid: 28d161e814dc7a94fb86438bcff389e4, type: 3}
   cameraTarget: {fileID: 598238638}
 --- !u!65 &598238642
 BoxCollider:
@@ -5267,7 +5287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0dd0ab7ccfedee439b955a05ab124af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5291,7 +5311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteIdler
   dialogueManager: {fileID: 1694075697}
-  idleSprite: {fileID: 21300000, guid: 09142a07768ea2c48b964c2d697f2a2c, type: 3}
+  idleSprite: {fileID: 21300000, guid: d0dd0ab7ccfedee439b955a05ab124af, type: 3}
 --- !u!1 &606061490
 GameObject:
   m_ObjectHideFlags: 0
@@ -9843,6 +9863,7 @@ GameObject:
   - component: {fileID: 1214108995}
   - component: {fileID: 1214108994}
   - component: {fileID: 1214108993}
+  - component: {fileID: 1214108999}
   m_Layer: 3
   m_Name: Eve
   m_TagString: Untagged
@@ -9858,8 +9879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214108991}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 20.3, y: -0.898, z: -84.53}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 20.3, y: -0.898, z: -85}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9878,7 +9899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteIdler
   dialogueManager: {fileID: 1694075697}
-  idleSprite: {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
+  idleSprite: {fileID: 21300000, guid: ea786581df8027747b35d03133f59668, type: 3}
 --- !u!114 &1214108994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9920,16 +9941,16 @@ MonoBehaviour:
   characterId: Eve
   spriteRenderer: {fileID: 1214108998}
   emotionSprites:
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
-  - {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
+  - {fileID: 21300000, guid: ea786581df8027747b35d03133f59668, type: 3}
+  - {fileID: 21300000, guid: 43e1da0536a1035409d62f6d8c6bebb6, type: 3}
+  - {fileID: 21300000, guid: 7d55aaa0ef6a446419b1c7006990a32e, type: 3}
+  - {fileID: 21300000, guid: 9f5334f38423368488a72455d96311e8, type: 3}
+  - {fileID: 21300000, guid: d1b3624dcf60843478b2dc25a6a3b947, type: 3}
+  - {fileID: 21300000, guid: 927578ab1e0ca394db5858640e2e5e9d, type: 3}
+  - {fileID: 21300000, guid: bbd248c052b7e6347b3b02e0213ba4f6, type: 3}
+  - {fileID: 21300000, guid: dd92b00015278e14c8ce40054c5fe7bd, type: 3}
+  - {fileID: 21300000, guid: dfc8e19208edd224998d77bb0bbb13ec, type: 3}
+  - {fileID: 21300000, guid: 6e1e03c1ffeb1204587ce468d0051244, type: 3}
   cameraTarget: {fileID: 1214108992}
 --- !u!65 &1214108997
 BoxCollider:
@@ -9999,7 +10020,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d0ba5a0a6b9d74a468891ef5cce9ee4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea786581df8027747b35d03133f59668, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10010,6 +10031,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1214108999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214108991}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b344eef5ac9e48b469686608fddc8589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteLooper
+  targetSprite: {fileID: 1214108998}
+  sprites:
+  - {fileID: 21300000, guid: 8eb0e63043e5bd14eade5146dd40b8c8, type: 3}
+  - {fileID: 21300000, guid: 008a03aeaadc11b4197ff12c069891b3, type: 3}
+  switchInterval: 0.6
+  dialogueManager: {fileID: 1694075697}
+  branchManager: {fileID: 1694075696}
 --- !u!1001 &1214651422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10967,6 +11007,7 @@ GameObject:
   - component: {fileID: 1306893590}
   - component: {fileID: 1306893589}
   - component: {fileID: 1306893588}
+  - component: {fileID: 1306893594}
   m_Layer: 3
   m_Name: Tom
   m_TagString: Untagged
@@ -10982,7 +11023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306893586}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 11.42, y: -0.898, z: -1.58}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
@@ -11002,7 +11043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteIdler
   dialogueManager: {fileID: 1694075697}
-  idleSprite: {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
+  idleSprite: {fileID: 21300000, guid: 2571c98bc8e3aa54cae4a452d7b5d6b5, type: 3}
 --- !u!114 &1306893589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11044,16 +11085,16 @@ MonoBehaviour:
   characterId: Tom
   spriteRenderer: {fileID: 1306893593}
   emotionSprites:
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
-  - {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
+  - {fileID: 21300000, guid: 2571c98bc8e3aa54cae4a452d7b5d6b5, type: 3}
+  - {fileID: 21300000, guid: 641768b088098a74c98b202ce0ea001d, type: 3}
+  - {fileID: 21300000, guid: 5e464a48767809143a12c5ed47f26f3b, type: 3}
+  - {fileID: 21300000, guid: deafef92ed206934d9325203115b13b0, type: 3}
+  - {fileID: 21300000, guid: dd44060b8aa921648b241c7fe0b03831, type: 3}
+  - {fileID: 21300000, guid: 2a3ad0b27d2656a449e34306c26c03d4, type: 3}
+  - {fileID: 21300000, guid: d9c0114cb3cd8b34fb4ee3e325e36dd3, type: 3}
+  - {fileID: 21300000, guid: d0111d56d4ed67248819efd95e2b1f02, type: 3}
+  - {fileID: 21300000, guid: 77bfdf3ab19721b4abdeea3e7c44ffd1, type: 3}
+  - {fileID: 21300000, guid: 4d2bad67f54571644a1de9b9a23391d3, type: 3}
   cameraTarget: {fileID: 1306893587}
 --- !u!65 &1306893592
 BoxCollider:
@@ -11123,7 +11164,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66cf8f5b8385e644d9e898b4ea055264, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2571c98bc8e3aa54cae4a452d7b5d6b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11134,6 +11175,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1306893594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306893586}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b344eef5ac9e48b469686608fddc8589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteLooper
+  targetSprite: {fileID: 1306893593}
+  sprites:
+  - {fileID: 21300000, guid: 1eeb6a3ba7b6c354bbc974fb8fa9cd43, type: 3}
+  - {fileID: 21300000, guid: a36d818c8ec85f44899b157ace41f285, type: 3}
+  switchInterval: 0.2
+  dialogueManager: {fileID: 1694075697}
+  branchManager: {fileID: 1694075696}
 --- !u!1001 &1330071558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13783,7 +13843,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -32.06, y: -0.782, z: 2.3339996}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.65}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1703256821}
@@ -17180,7 +17240,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -31.16, y: -1.13, z: -0.81799984}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.65}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1703256821}

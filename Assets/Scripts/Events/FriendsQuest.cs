@@ -12,6 +12,7 @@ public class FriendsQuest : MonoBehaviour
     public DeathPlaneMove deathTimer;
     public PhoneManager phone;
     public PlayerInteraction interaction;
+    
 
 
     [Header("Transforms and Dialogue Components")]
